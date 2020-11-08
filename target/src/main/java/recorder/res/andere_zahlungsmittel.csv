@@ -1,0 +1,49 @@
+﻿pay_id;pay_sub;reg_id;txt
+1;0;0;BAR
+2;0;0;EC-Cash
+3;17;0;V-Pay Offl
+3;0;0;EC-Cash Offl.
+3;11;0;Maestro Offl.
+3;12;0;VISA Offl.
+3;13;0;AmEx Offl.
+3;14;0;Diners Offl.
+3;16;0;Mastercard Offl
+3;24;0;REWE-MA Offl.
+5;0;0;Gutschein
+5;1;0;Edenred
+5;2;0;EM-Sodexho
+5;3;0;Geschenkguts.
+5;5;0;Sozialguts.
+5;6;0;Sonstige Guts.
+6;0;0;Finanzverkauf
+7;0;0;Verk.a.Rech.
+8;0;0;Fremdwährungskür
+11;0;0;Maestro
+12;0;0;VISA
+13;0;0;American Express
+14;0;0;Diners
+16;0;0;Mastercard
+17;0;0;V-Pay
+22;0;0;WRück. Finanzv.
+23;0;0;WRück.Verk.a.Rec
+24;0;0;REWE MA-Karte
+25;0;0;Geschenkk.
+30;0;0;CG_EURO
+31;0;0;Coupon
+32;0;0;SEK
+33;0;0;USD
+34;0;0;CHF
+35;0;0;JPY
+36;0;0;DKK
+37;0;0;CZK
+38;0;0;HUF
+39;0;0;PLN
+40;0;0;GBP
+42;0;0;Online Zahlung
+43;0;0;Automat-BAR
+44;0;0;REWE Guthaben
+48;0;0;Girogo
+50;0;0;PAYBACK PAY
+51;0;0;PAYBACK Punkte
+98;0;0;Belege Einnahmen
+99;0;0;Belege Ausgaben

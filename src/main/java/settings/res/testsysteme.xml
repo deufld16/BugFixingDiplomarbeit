@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsysteme>
+     <testsystem>
+          <backoffice>10.0.0.64</backoffice>
+          <kassa>
+               <ip>10.0.0.2</ip>
+               <id>1</id>
+               <group>96</group>
+               <type>RB4</type>
+          </kassa>
+          <active>false</active>
+          <name>Virtuelles Testsystem Small</name>
+     </testsystem>
+     <testsystem>
+          <backoffice>10.0.0.64</backoffice>
+          <kassa>
+               <ip>10.0.0.1</ip>
+               <id>1</id>
+               <group>96</group>
+               <type>RB5</type>
+          </kassa>
+          <kassa>
+               <ip>10.0.0.2</ip>
+               <id>1</id>
+               <group>96</group>
+               <type>RB4</type>
+          </kassa>
+          <active>false</active>
+          <name>Virtuelles Testsystem 1</name>
+     </testsystem>
+     <testsystem>
+          <backoffice>10.0.0.10</backoffice>
+          <kassa>
+               <ip>10.0.0.1</ip>
+               <id>1</id>
+               <group>96</group>
+               <type>RB5</type>
+          </kassa>
+          <kassa>
+               <ip>10.0.0.2</ip>
+               <id>1</id>
+               <group>96</group>
+               <type>RB4</type>
+          </kassa>
+          <active>true</active>
+          <name>Testsystem lokal</name>
+     </testsystem>
+     <testsystem>
+          <backoffice>10.93.28.64</backoffice>
+          <kassa>
+               <ip>10.0.0.2</ip>
+               <id>1</id>
+               <group>96</group>
+               <type>RB4</type>
+          </kassa>
+          <active>false</active>
+          <name>Backoffice: 10.93.28.64 - 10.0.0.2: RB4</name>
+     </testsystem>
+</testsysteme>

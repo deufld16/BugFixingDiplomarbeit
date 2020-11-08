@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<backoffices>
+     <backoffice>
+          <ip>10.0.0.64</ip>
+     </backoffice>
+     <backoffice>
+          <ip>10.93.31.50</ip>
+     </backoffice>
+     <backoffice>
+          <ip>10.0.0.10</ip>
+     </backoffice>
+     <backoffice>
+          <ip>10.93.28.64</ip>
+     </backoffice>
+</backoffices>
