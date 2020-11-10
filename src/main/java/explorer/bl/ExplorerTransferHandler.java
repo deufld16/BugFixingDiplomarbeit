@@ -164,7 +164,7 @@ public class ExplorerTransferHandler extends TransferHandler {
 
         if (((ExplorerLayer) source_node.getUserObject()).getPath().toFile().getName().contains("INIT")
                 || ((ExplorerLayer) source_node.getUserObject()).getPath().toFile().getName().contains("CLEANUP")) {
-            if (((ExplorerLayer) source_node.getUserObject()) instanceof CommandRun || ((ExplorerLayer) source_node.getUserObject()) instanceof TestGroupRun) {
+            if (((ExplorerLayer) source_node.getUserObject()) instanceof CommandRun) {
             } else {
                 return false;
             }
