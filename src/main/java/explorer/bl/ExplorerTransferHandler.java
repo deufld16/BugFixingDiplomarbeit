@@ -162,9 +162,9 @@ public class ExplorerTransferHandler extends TransferHandler {
             return false;
         }
 
-        if (((ExplorerLayer) source_node.getUserObject()).getPath().toString().toUpperCase().contains("INIT")
-                || ((ExplorerLayer) source_node.getUserObject()).getPath().toString().toUpperCase().contains("CLEANUP")) {
-            if (((ExplorerLayer) source_node.getUserObject()) instanceof CommandRun) {
+        if (((ExplorerLayer) source_node.getUserObject()).getPath().toFile().getName().contains("INIT")
+                || ((ExplorerLayer) source_node.getUserObject()).getPath().toFile().getName().contains("CLEANUP")) {
+            if (((ExplorerLayer) source_node.getUserObject()) instanceof CommandRun || ((ExplorerLayer) source_node.getUserObject()) instanceof TestGroupRun) {
             } else {
                 return false;
             }
