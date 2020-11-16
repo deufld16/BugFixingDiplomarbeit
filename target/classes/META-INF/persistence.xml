@@ -15,7 +15,7 @@
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/dashboarddb"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="admin123"/>
+      <property name="javax.persistence.jdbc.password" value="admin1234"/>
     </properties>
   </persistence-unit>
 </persistence>

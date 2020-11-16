@@ -60,7 +60,7 @@ public class DashboardPanel extends javax.swing.JPanel {
     private DefaultComboBoxModel dcbmHistory;
     private DefaultComboBoxModel dcbmUser;
     private static final Color[] SLICECOLOR_DURCH = new Color[]{new Color(204, 10, 10), new Color(28, 163, 39), new Color(0, 0, 255)};
-    private static final Color[] SLICECOLOR_AENDERUNG = new Color[]{new Color(204, 10, 10),new Color(255, 174, 0),new Color(66, 135, 245),new Color(187, 0, 255), new Color(28, 163, 39)};
+    private static final Color[] SLICECOLOR_AENDERUNG = new Color[]{new Color(204, 10, 10), new Color(255, 174, 0), new Color(66, 135, 245), new Color(187, 0, 255), new Color(28, 163, 39)};
 //    chart.addSeries("Entfernt", getXDisplay(getXAxisData(startDate, endDate), daysBetween(startDate, endDate)), delete, null);
 //                chart.addSeries("Verändert", getXDisplay(getXAxisData(startDate, endDate), daysBetween(startDate, endDate)), add, null);
 //                chart.addSeries("Verschoben", getXDisplay(getXAxisData(startDate, endDate), daysBetween(startDate, endDate)), move, null);
@@ -98,6 +98,7 @@ public class DashboardPanel extends javax.swing.JPanel {
         startDate = previousMonday;
         endDate = nextSunday;
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -230,15 +231,18 @@ public class DashboardPanel extends javax.swing.JPanel {
                 endDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
             }
         }
-
-        updateChart();
+//        if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
+            updateChart();
+//        }
     }//GEN-LAST:event_onEnterStartDate
 
     private void onCbHistory(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onCbHistory
-        updateChart();
+//        if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
+            updateChart();
+//        }
     }//GEN-LAST:event_onCbHistory
 
-     public synchronized void updateChart() {
+    public synchronized void updateChart() {
         try {
             if (cbHistory.getSelectedItem().equals("Durchlaufstatistik")) {
                 try {
@@ -246,6 +250,7 @@ public class DashboardPanel extends javax.swing.JPanel {
                     chart.removeSeries("Fehlgeschlagen");
                     chart.removeSeries("Referenzen übernommen");
                 } catch (Exception i) {
+                    //i.printStackTrace();
                 }
                 chart.getStyler().setSeriesColors(SLICECOLOR_DURCH);
                 List<Integer> fail = new ArrayList<>();
@@ -261,14 +266,14 @@ public class DashboardPanel extends javax.swing.JPanel {
                     try {
                         if (((Nutzer) cbUser.getSelectedItem()).getNutzerid() == -1) {
                             //for (Durchlauf durch : DB_Access.getInstance().selectRun(dates.get(i), dates.get(i + 1))) {
-                            for(DurchlaufNew durch : DB_Access_Manager.getInstance().selectRun(dates.get(i), dates.get(i + 1))){
+                            for (DurchlaufNew durch : DB_Access_Manager.getInstance().selectRun(dates.get(i), dates.get(i + 1))) {
                                 tmpFail += durch.getFehlgeschlagen();
                                 tmpSuccess += durch.getErfolgreich();
                                 tmpRefs += durch.getUebernahmeAnz();
                             }
                         } else {
                             //for (Durchlauf durch : DB_Access.getInstance().selectRun(dates.get(i), dates.get(i + 1), (Nutzer) cbUser.getSelectedItem())) {
-                            for(DurchlaufNew durch : DB_Access_Manager.getInstance().selectRun(dates.get(i), dates.get(i + 1), (NutzerNew) cbUser.getSelectedItem())){
+                            for (DurchlaufNew durch : DB_Access_Manager.getInstance().selectRun(dates.get(i), dates.get(i + 1), (NutzerNew) cbUser.getSelectedItem())) {
                                 tmpFail += durch.getFehlgeschlagen();
                                 tmpSuccess += durch.getErfolgreich();
                                 tmpRefs += durch.getUebernahmeAnz();
@@ -320,7 +325,7 @@ public class DashboardPanel extends javax.swing.JPanel {
                         if (((Nutzer) cbUser.getSelectedItem()).getNutzerid() == -1) {
                             //System.out.println("a");
                             //for (Change change : DB_Access.getInstance().selectChanges(dates.get(i), dates.get(i + 1))) {
-                            for(ChangeNew change : DB_Access_Manager.getInstance().selectChanges(dates.get(i), dates.get(i + 1))){
+                            for (ChangeNew change : DB_Access_Manager.getInstance().selectChanges(dates.get(i), dates.get(i + 1))) {
 //                                System.out.println("asdf");
 //                                System.out.println(change.getType());
                                 switch (change.getChangeType().getBezeichnung()) {
@@ -367,7 +372,7 @@ public class DashboardPanel extends javax.swing.JPanel {
 
                         }
                     } catch (NullPointerException n) {
-                        n.printStackTrace();
+                        //n.printStackTrace();
                     }
 //                    System.out.println(tmpAdd);
                     add.add(tmpAdd);
@@ -389,11 +394,11 @@ public class DashboardPanel extends javax.swing.JPanel {
             updateUI();
         } catch (NullPointerException no) {
             //no.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Verbindung zur Datenbank konnte nicht hergestellt werden, Dashboard funktionalität kann nicht zur Verfügung gestellt werden");
+            //JOptionPane.showMessageDialog(null, "Verbindung zur Datenbank konnte nicht hergestellt werden, Dashboard funktionalität kann nicht zur Verfügung gestellt werden");
         }
     }
-     
-      public void refillUsers() {
+
+    public void refillUsers() {
         dcbmUser = new DefaultComboBoxModel();
         cbUser.setModel(dcbmUser);
         dcbmUser.addElement(new Nutzer(-1, "Übersicht"));
@@ -405,16 +410,16 @@ public class DashboardPanel extends javax.swing.JPanel {
 //                }
 //            } else {
 //            }
-            if(DatabaseGlobalAccess.getInstance().isDbReachable()){
-                for (NutzerNew user : DatabaseGlobalAccess.getInstance().getAllUsers()) {
-                    dcbmUser.addElement(user);
-                }
+        if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
+            for (NutzerNew user : DatabaseGlobalAccess.getInstance().getAllUsers()) {
+                dcbmUser.addElement(user);
             }
+        }
 //        } catch (SQLException ex) {
 //            System.out.println("Failed to load users from database");
 //        }
     }
-     
+
     public List<LocalDateTime> convertToQuery(List<LocalDate> input) {;
         List<LocalDateTime> hilfe = new ArrayList<>();
         for (int i = 0; i < input.size() - 1; i++) {
@@ -426,7 +431,8 @@ public class DashboardPanel extends javax.swing.JPanel {
         hilfe.add(input.get(input.size() - 1).atStartOfDay().minusNanos(1));
         return hilfe;
     }
-    private List<LocalDate> convertToLocalDate(List<LocalDateTime> input){
+
+    private List<LocalDate> convertToLocalDate(List<LocalDateTime> input) {
         List<LocalDate> res = new ArrayList<>();
         for (LocalDateTime localDateTime : input) {
             res.add(localDateTime.toLocalDate());
