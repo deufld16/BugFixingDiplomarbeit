@@ -232,13 +232,15 @@ public class DashboardPanel extends javax.swing.JPanel {
             }
         }
 //        if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
+
             updateChart();
+
 //        }
     }//GEN-LAST:event_onEnterStartDate
 
     private void onCbHistory(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onCbHistory
 //        if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
-            updateChart();
+        updateChart();
 //        }
     }//GEN-LAST:event_onCbHistory
 
@@ -427,8 +429,10 @@ public class DashboardPanel extends javax.swing.JPanel {
             hilfe.add(input.get(i + 1).atStartOfDay().minusNanos(1));
 
         }
-        hilfe.add(input.get(input.size() - 1).atStartOfDay());
-        hilfe.add(input.get(input.size() - 1).atStartOfDay().minusNanos(1));
+        if (input.size() > 0) {
+            hilfe.add(input.get(input.size() - 1).atStartOfDay());
+            hilfe.add(input.get(input.size() - 1).atStartOfDay().minusNanos(1));
+        }
         return hilfe;
     }
 
@@ -467,6 +471,9 @@ public class DashboardPanel extends javax.swing.JPanel {
         List<LocalDate> dates = new ArrayList<>();
         for (int i = 0; i <= daysbetween; i++) {
             dates.add(start.plusDays(i));
+        }
+        if(dates.isEmpty()){
+            dates.add(start);
         }
         return dates;
     }
