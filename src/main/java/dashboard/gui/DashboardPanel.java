@@ -40,6 +40,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFormattedTextField;
+import javax.swing.JOptionPane;
 import org.knowm.xchart.CategoryChart;
 import org.knowm.xchart.CategoryChartBuilder;
 import org.knowm.xchart.PieChartBuilder;
@@ -387,7 +388,8 @@ public class DashboardPanel extends javax.swing.JPanel {
             }
             updateUI();
         } catch (NullPointerException no) {
-            no.printStackTrace();
+            //no.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Verbindung zur Datenbank konnte nicht hergestellt werden, Dashboard funktionalität kann nicht zur Verfügung gestellt werden");
         }
     }
      
