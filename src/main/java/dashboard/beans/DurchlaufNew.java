@@ -8,13 +8,17 @@ package dashboard.beans;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Objects;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -45,9 +49,9 @@ public class DurchlaufNew implements Serializable{
     @Column(nullable = false)
     private int uebernahmeAnz;
     
-    @ManyToOne
+    @ManyToMany
     @JoinColumn(name = "gegenstand", nullable = false)
-    private DurchlaufgegenstandNew gegenstand;
+    private List<DurchlaufgegenstandNew> gegenstand = new LinkedList<>();
     
     @ManyToOne
     @JoinColumn(name = "nutzer", nullable = false)
@@ -112,13 +116,17 @@ public class DurchlaufNew implements Serializable{
         this.uebernahmeAnz = uebernahmeAnz;
     }
 
-    public DurchlaufgegenstandNew getGegenstand() {
+    public List<DurchlaufgegenstandNew> getGegenstand() {
         return gegenstand;
     }
 
-    public void setGegenstand(DurchlaufgegenstandNew gegenstand) {
+    public void setGegenstand(List<DurchlaufgegenstandNew> gegenstand) {
         this.gegenstand = gegenstand;
-        this.gegenstand.getAllDurchlauf().add(this);
+        for (DurchlaufgegenstandNew durchlaufgegenstandNew : gegenstand) {
+            System.out.println(durchlaufgegenstandNew.getGegenstandid() + durchlaufgegenstandNew.getBezeichnung());
+           durchlaufgegenstandNew.getAllDurchlauf().add(this);
+        }
+      //  this.gegenstand.getAllDurchlauf().add(this);
     }
 
     public NutzerNew getNutzer() {

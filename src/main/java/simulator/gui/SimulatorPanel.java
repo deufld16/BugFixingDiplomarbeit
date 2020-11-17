@@ -197,6 +197,9 @@ public class SimulatorPanel extends javax.swing.JPanel {
      */
     private void onStart(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onStart
         try {
+            for (ExplorerLayer layer : ExecutionManager.getInstance().getTargets()) {
+                System.out.println(layer.getDurchlauf_gegenstand());
+            }
             ExecutionManager.getInstance().startSimulation();
             btTVStop.setEnabled(true);
             btTVStart.setEnabled(false);

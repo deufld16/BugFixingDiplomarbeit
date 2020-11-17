@@ -30,7 +30,7 @@ public class DatabaseGlobalAccess {
     private List<Projekt> allProjects = new LinkedList<>();
     private List<NutzerNew> allUsers = new LinkedList<>();
     private boolean dbReachable = false;
-    private DurchlaufNew durchlauf = new DurchlaufNew();
+    private List<DurchlaufNew> durchlauf = new LinkedList<>();
 //    private List<Testgruppe> allTestGruppen = new LinkedList<>();
 //    private List<TestCase> allTestCases = new LinkedList<>();
 //    private List<Command> allCommands = new LinkedList<>();
@@ -42,14 +42,14 @@ public class DatabaseGlobalAccess {
     }
 
     public void getDatabaseData() {
-//        em.persist(new ChangeType("DELETED"));
-//        em.persist(new ChangeType("ADDED"));
-//        em.persist(new ChangeType("MOVED"));
-//        em.persist(new ChangeType("STATECHANGED"));
-//        em.persist(new ChangeType("CHANGED"));
-//        em.persist(new NutzerNew("Default User"));
-//        em.getTransaction().begin();
-//        em.getTransaction().commit();
+        em.persist(new ChangeType("DELETED"));
+        em.persist(new ChangeType("ADDED"));
+        em.persist(new ChangeType("MOVED"));
+        em.persist(new ChangeType("STATECHANGED"));
+        em.persist(new ChangeType("CHANGED"));
+        em.persist(new NutzerNew("Default User"));
+        em.getTransaction().begin();
+        em.getTransaction().commit();
 
         TypedQuery<ChangeType> changeTypeQuery = em.createNamedQuery("ChangeType.selectAll", ChangeType.class);
         allChangeTypes = new LinkedList<>(changeTypeQuery.getResultList());
@@ -90,6 +90,12 @@ public class DatabaseGlobalAccess {
     public NutzerNew getCurrentNutzer() {
         return currentNutzer;
     }
+    
+    public DurchlaufNew getNewDurchlauf(){
+        durchlauf.add(new DurchlaufNew());
+        em.persist(durchlauf.get(durchlauf.size()-1));
+        return durchlauf.get(durchlauf.size()-1);
+    }
 
     public void setCurrentNutzer(NutzerNew currentNutzer) {
         this.currentNutzer = currentNutzer;
@@ -128,12 +134,9 @@ public class DatabaseGlobalAccess {
     }
 
     public DurchlaufNew getDurchlauf() {
-        return durchlauf;
+         return durchlauf.get(durchlauf.size()-1);
     }
 
-    public void setDurchlauf(DurchlaufNew durchlauf) {
-        this.durchlauf = durchlauf;
-    }
 
 //    public List<Testgruppe> getAllTestGruppen() {
 //        return allTestGruppen;
