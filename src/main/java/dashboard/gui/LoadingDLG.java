@@ -74,9 +74,9 @@ public class LoadingDLG extends javax.swing.JDialog {
                     lastCurrValue = currValue;
                     lbCurrProcess.setText(String.format(progressText, currValue, maximum));
                 }
-                System.out.println("test");
+                //System.out.println("test");
             }
-            System.out.println(currValue + "-" + maximum);
+            //System.out.println(currValue + "-" + maximum);
             instance.dispose();
         }
 

@@ -19,6 +19,7 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -41,7 +42,7 @@ public class DurchlaufgegenstandNew implements Serializable {
     @Column(nullable = false)
     private int deleted;
 
-    @OneToMany(mappedBy = "gegenstand", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "gegenstand")
     private List<DurchlaufNew> allDurchlauf = new LinkedList<>();
 
     @OneToMany(mappedBy = "gegenstand", cascade = CascadeType.ALL)

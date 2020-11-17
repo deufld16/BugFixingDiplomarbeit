@@ -26,12 +26,14 @@ public class CommandRun extends ExplorerLayer {
         super(description, path);
         this.className = className;
         this.nodeList = nodeList;
+        System.out.println("Ich bin neu 4");
     }
 
     public CommandRun(String className, NodeList nodeList, String description, Path path, DurchlaufgegenstandNew durchlaufgegenstand) {
         super(description, path, durchlaufgegenstand);
         this.className = className;
         this.nodeList = nodeList;
+        System.out.println("Ich bin neu");
     }
 
     public String getDisplayName() {
