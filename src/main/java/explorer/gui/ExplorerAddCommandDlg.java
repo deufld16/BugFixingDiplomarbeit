@@ -1051,7 +1051,7 @@ public class ExplorerAddCommandDlg extends javax.swing.JDialog {
                     }
                 }
                 command = new CommandRun(commandTyp, nodeList, description, parentTC.getPath());
-                if(DatabaseGlobalAccess.getInstance().isDbReachable()){
+                if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
                     dashboard.beans.Command db_com = new dashboard.beans.Command(description, LocalDate.now(), 0);
                     command.setDurchlauf_gegenstand(db_com);
                 }
@@ -1083,6 +1083,10 @@ public class ExplorerAddCommandDlg extends javax.swing.JDialog {
                     }
                     inputPerSubnodeList.add(inputPerSubnode);
                     CommandRun cr = new CommandRun(commandTyp, nodeList, description, parentTC.getPath());
+                    if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
+                        dashboard.beans.Command db_com = new dashboard.beans.Command(description, LocalDate.now(), 0);
+                        cr.setDurchlauf_gegenstand(db_com);
+                    }
                     multipleCommandRuns.add(cr);
                 }
             }

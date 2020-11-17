@@ -30,7 +30,7 @@ public class DatabaseGlobalAccess {
     private List<Projekt> allProjects = new LinkedList<>();
     private List<NutzerNew> allUsers = new LinkedList<>();
     private boolean dbReachable = false;
-    private DurchlaufNew durchlauf = null;
+    private DurchlaufNew durchlauf = new DurchlaufNew();
 //    private List<Testgruppe> allTestGruppen = new LinkedList<>();
 //    private List<TestCase> allTestCases = new LinkedList<>();
 //    private List<Command> allCommands = new LinkedList<>();
