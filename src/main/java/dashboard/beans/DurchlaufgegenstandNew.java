@@ -42,7 +42,7 @@ public class DurchlaufgegenstandNew implements Serializable {
     @Column(nullable = false)
     private int deleted;
 
-    @ManyToMany(mappedBy = "gegenstand")
+    @ManyToMany(mappedBy = "gegenstand", cascade = CascadeType.ALL)
     private List<DurchlaufNew> allDurchlauf = new LinkedList<>();
 
     @OneToMany(mappedBy = "gegenstand", cascade = CascadeType.ALL)

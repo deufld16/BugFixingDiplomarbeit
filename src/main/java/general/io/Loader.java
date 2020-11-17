@@ -333,7 +333,8 @@ public class Loader {
                             setCurrentNutzer(dashboard.bl.DatabaseGlobalAccess.getInstance().getAllUsers().get(index));
                 }
             } else {
-                dashboard.bl.DatabaseGlobalAccess.getInstance().setCurrentNutzer(null);
+                dashboard.bl.DatabaseGlobalAccess.getInstance().setCurrentNutzer(dashboard.bl.DatabaseGlobalAccess.getInstance().getAllUsers()
+                        .get(dashboard.bl.DatabaseGlobalAccess.getInstance().getAllUsers().indexOf(new NutzerNew("Default User"))));
             }
         }
     }
