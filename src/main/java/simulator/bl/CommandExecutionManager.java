@@ -86,7 +86,7 @@ public class CommandExecutionManager implements Runnable {
 
     public CommandExecutionManager(List<ExplorerLayer> targets, LocalDateTime timestamp, List<Kasse> kassen, int cnt) {
         this.timestamp = timestamp;
-        this.targets = validateTargets(targets);
+        this.targets = targets;
         this.kassen = kassen;
         this.cashpoints = kassen.size();
         this.totalAmount = cnt;
@@ -110,7 +110,7 @@ public class CommandExecutionManager implements Runnable {
     }
 
     public void setTargets(List<ExplorerLayer> targets) {
-        this.targets = validateTargets(targets);
+        this.targets = targets;
     }
 
     private List<ExplorerLayer> getAllTargetItems() {
@@ -137,6 +137,41 @@ public class CommandExecutionManager implements Runnable {
                 runs.addAll(((TestCaseRun) target).getCommands());
             } else {
                 runs.add(target);
+            }
+        }
+        return runs;
+    }
+
+    private List<DurchlaufgegenstandNew> getAllNewTargetItems() {
+        List<DurchlaufgegenstandNew> runs = new ArrayList<>();
+        for (ExplorerLayer target : targets) {
+            if (target instanceof ProjectRun) {
+                runs.add(target.getDurchlauf_gegenstand());
+                for (TestGroupRun group : ((ProjectRun) target).getTestgroups()) {
+                    runs.add(group.getDurchlauf_gegenstand());
+                    for (TestCaseRun testCase : group.getTestCases()) {
+                        runs.add(testCase.getDurchlauf_gegenstand());
+                        for (CommandRun command : testCase.getCommands()) {
+                            runs.add(command.getDurchlauf_gegenstand());
+                        }
+                    }
+
+                }
+            } else if (target instanceof TestGroupRun) {
+                runs.add(target.getDurchlauf_gegenstand());
+                for (TestCaseRun testCase : ((TestGroupRun) target).getTestCases()) {
+                    runs.add(testCase.getDurchlauf_gegenstand());
+                    for (CommandRun command : testCase.getCommands()) {
+                        runs.add(command.getDurchlauf_gegenstand());
+                    }
+                }
+            } else if (target instanceof TestCaseRun) {
+                runs.add(target.getDurchlauf_gegenstand());
+                for (CommandRun command : ((TestCaseRun) target).getCommands()) {
+                    runs.add(command.getDurchlauf_gegenstand());
+                }
+            } else {
+                runs.add(target.getDurchlauf_gegenstand());
             }
         }
         return runs;
@@ -308,18 +343,6 @@ public class CommandExecutionManager implements Runnable {
     }
 
     /**
-     * Validates if no node is a child node from another
-     *
-     * @param items : all possible targets
-     * @return
-     */
-    private List<ExplorerLayer> validateTargets(List<ExplorerLayer> items) {
-        List<ExplorerLayer> valid = new ArrayList<>();
-        valid = items;
-        return valid;
-    }
-
-    /**
      * Updates the overview chart
      *
      * @param total : amount of commands to be executed
@@ -455,12 +478,12 @@ public class CommandExecutionManager implements Runnable {
                             //e.printStackTrace();
                         }
                         if (pathToRef == null) {
-                            
+
                             run.get(0).getPath().getParent().getParent().getParent().resolve("ref").resolve("20.070").toFile().mkdirs();
                             List<File> references = Mapper.getDirectoriesOfDirectory(run.get(0).getPath().getParent().getParent().getParent().resolve("ref").toFile());
-                            
+
                             pathToRef = run.get(0).getPath().getParent().getParent().getParent().resolve("ref").resolve(references.get(references.size() - 1).getName());
-                            
+
                         }
                     }
                     //generates a new thread pool and executor service for every command list
@@ -508,9 +531,9 @@ public class CommandExecutionManager implements Runnable {
 
         }
         //if (GlobalParamter.getInstance().getSelected_user() != null) {
-        if(DatabaseGlobalAccess.getInstance().getCurrentNutzer() != null){
+        if (DatabaseGlobalAccess.getInstance().getCurrentNutzer() != null) {
             //Durchlauf durch = GlobalParamter.getInstance().getCurrentRun();
-            DurchlaufNew durch = DatabaseGlobalAccess.getInstance().getDurchlauf();
+            DurchlaufNew durch = DatabaseGlobalAccess.getInstance().getNewDurchlauf();
             int fail = 0;
             int erf = 0;
             for (int i = 0; i < cashpoints; i++) {
@@ -522,6 +545,7 @@ public class CommandExecutionManager implements Runnable {
             durch.setDurchlaufDatum(LocalDate.now());
             durch.setAnzahl(fail + erf);
             durch.setNutzer(DatabaseGlobalAccess.getInstance().getCurrentNutzer());
+            durch.setGegenstand(getAllNewTargetItems());
             DB_Access_Manager.getInstance().updateData();
 //            GlobalParamter.getInstance().setCurrentRun(durch);
 //            try {
@@ -533,8 +557,7 @@ public class CommandExecutionManager implements Runnable {
 //            }
         }
         //starts the analyer tool
-        System.out.println(pathToErg);
-        System.out.println(pathToRef);
+
         ExecutionManager.getInstance().getParent().getBtNextStep().setEnabled(false);
         if (pathToErg != null && pathToRef != null) {
             GlobalAccess.getInstance().getTest_ide_main_frame().changeTool("analyzer");

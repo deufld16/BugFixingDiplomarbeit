@@ -107,7 +107,7 @@ public class DB_Access_Manager {
                         }
                         testC.setDurchlauf_gegenstand(tc);
                         for (CommandRun command : testC.getCommands()) {
-                            System.out.println(command);
+                            System.out.println(command + "Flojo");
                             Command com = new Command(command.getDescription(), LocalDate.now(), 0);
                             if (!containsItem(tc, com)) {
                                 System.out.println("ich bin nicht drin 3");
