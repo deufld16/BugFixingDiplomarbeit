@@ -24,7 +24,7 @@ import org.xml.sax.SAXException;
 
 /**
  * This class is to read and write data from/to the disk, 
- * so that the results could be analyed resp. changes could be saved
+ * so that the results could be analyzed resp. changes could be saved
  * 
  * @author Maximilian Strohmaier
  */

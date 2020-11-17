@@ -226,6 +226,7 @@ public class ExplorerCommandPanel extends javax.swing.JPanel {
 //                    DB_Access.getInstance().updateEntry(com, oldDescription);
 //                    DB_Access.getInstance().addChangeEntry(com, ChangeType.CHANGED);
 //                }
+                System.out.println("ich bin hier");
                 if(DatabaseGlobalAccess.getInstance().isDbReachable()){
                     for (dashboard.beans.ChangeType type : DatabaseGlobalAccess.getInstance().getAllChangeTypes()) {
                         if(type.getBezeichnung() == "CHANGED"){
@@ -239,6 +240,8 @@ public class ExplorerCommandPanel extends javax.swing.JPanel {
                 nodeList = ExplorerIO.getCurrentNodeList(Paths.get(com.getPath().toString(), "run.xml"), com.getDescription());
                 commandText = newName;
                 etm.fireTreeStructureChanged();
+            }else{
+                System.out.println("neu");
             }
         } catch (ParserConfigurationException | SAXException | IOException | XPathExpressionException | TransformerException ex) {
             ex.printStackTrace();

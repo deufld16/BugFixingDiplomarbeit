@@ -69,6 +69,7 @@ public class AnalyzerManager {
             testgroupsErg = ResultsIO.readSimulationErg();
             if (testgroupsErg != null) {
 //                executeDiff();
+                panel.adjustComponents();
                 LoadingDLG ldlg = new LoadingDLG(
                         GlobalAccess.getInstance().getTest_ide_main_frame(), 
                         true, 
