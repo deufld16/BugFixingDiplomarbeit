@@ -42,7 +42,7 @@
                <group>96</group>
                <type>RB4</type>
           </kassa>
-          <active>true</active>
+          <active>false</active>
           <name>Testsystem lokal</name>
      </testsystem>
      <testsystem>
@@ -55,5 +55,16 @@
           </kassa>
           <active>false</active>
           <name>Backoffice: 10.93.28.64 - 10.0.0.2: RB4</name>
+     </testsystem>
+     <testsystem>
+          <backoffice>10.0.0.1</backoffice>
+          <kassa>
+               <ip>10.0.0.1</ip>
+               <id>1</id>
+               <group>96</group>
+               <type>RB5</type>
+          </kassa>
+          <active>true</active>
+          <name>Backoffice: 10.0.0.1 - 10.0.0.1: RB5</name>
      </testsystem>
 </testsysteme>

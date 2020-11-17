@@ -139,7 +139,9 @@ public class AnalyzerPanel extends javax.swing.JPanel {
                 + "Zeit in Anspruch nehmen.", "Diff-Optimierung", JOptionPane.YES_NO_OPTION);
         GlobalParamter.getInstance().setOptimizeDiffer(paneResult == JOptionPane.YES_OPTION);
         
-        adjustComponents();
+//        adjustComponents();
+        am = AnalyzerManager.getInstance();
+        am.setPanel(this);
         ResultsIO.setRefPath(refPath);
         ResultsIO.setErgPath(ergPath);
         
@@ -192,14 +194,14 @@ public class AnalyzerPanel extends javax.swing.JPanel {
     /***
      * Method to adjust the GUI components in order to get an adequate UI
      */
-    private void adjustComponents()
+    public void adjustComponents()
     {        
         sp1.getViewport().addChangeListener(CL_SP_1);
         sp2.getViewport().addChangeListener(CL_SP_2);
         updateUI();
         
-        am = AnalyzerManager.getInstance();
-        am.setPanel(this);
+//        am = AnalyzerManager.getInstance();
+//        am.setPanel(this);
         
         rsm = ResultSelectionManager.getInstance();
         rsm.setPanel(this);        
@@ -252,6 +254,10 @@ public class AnalyzerPanel extends javax.swing.JPanel {
         if(miText.endsWith("aufheben")) {
             sp1.getViewport().removeChangeListener(CL_SP_1);
             sp2.getViewport().removeChangeListener(CL_SP_2);
+//            sp1.getViewport().removeAll();
+//            sp1.setViewportView(refPane);
+//            sp2.getViewport().removeAll();
+//            sp2.setViewportView(ergPane);
             miText = "Scrollverbindung von ref und erg erzeugen";
         } else {
             sp1.getViewport().addChangeListener(CL_SP_1);

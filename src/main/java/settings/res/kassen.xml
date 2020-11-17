@@ -6,16 +6,4 @@
           <group>96</group>
           <type>RB5</type>
      </kassa>
-     <kassa>
-          <ip>10.0.0.2</ip>
-          <id>1</id>
-          <group>96</group>
-          <type>RB4</type>
-     </kassa>
-     <kassa>
-          <ip>192.168.12.10</ip>
-          <id>10</id>
-          <group>97</group>
-          <type>RB4</type>
-     </kassa>
 </kassen>
