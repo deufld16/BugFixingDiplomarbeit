@@ -76,7 +76,6 @@ public class ResultType {
 
     public void setAccepted(boolean accepted) {
         this.accepted = accepted;
-        System.out.println("beans "+ resultFileType.getDescription()+ " " + accepted);
     }
 
     public Map<String, List<String>> getDifferences() {

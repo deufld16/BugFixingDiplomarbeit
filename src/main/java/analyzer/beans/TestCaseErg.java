@@ -11,12 +11,13 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Class that represents a test case in the file structure after the simulation process
- * 
+ * Class that represents a test case in the file structure after the simulation
+ * process
+ *
  * @author Maximilian Strohmaier
  */
-public class TestCaseErg extends ExplorerLayer{
-    
+public class TestCaseErg extends ExplorerLayer {
+
     private List<CashpointErg> cashpoints;
     private boolean successful;
     private boolean accepted;
@@ -55,7 +56,7 @@ public class TestCaseErg extends ExplorerLayer{
     public void setAccepted(boolean accepted) {
         this.accepted = accepted;
     }
-    
+
     public void acceptAllChildren(boolean accepted) {
         for (CashpointErg cp : cashpoints) {
             cp.setAccepted(accepted);
@@ -65,15 +66,18 @@ public class TestCaseErg extends ExplorerLayer{
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 97 * hash + Objects.hashCode(this.cashpoints);
-        hash = 97 * hash + (this.successful ? 1 : 0);
-        hash = 97 * hash + (this.accepted ? 1 : 0);
+        int hash = 7;
+        hash = 79 * hash + Objects.hashCode(this.cashpoints);
+        hash = 79 * hash + (this.successful ? 1 : 0);
+        hash = 79 * hash + (this.accepted ? 1 : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object obj) {
+        if (!super.equals(obj)) {
+            return false;
+        }
         if (this == obj) {
             return true;
         }
@@ -95,5 +99,4 @@ public class TestCaseErg extends ExplorerLayer{
         }
         return true;
     }
-
 }
