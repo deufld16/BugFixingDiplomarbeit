@@ -10,6 +10,7 @@ import dashboard.bl.DatabaseGlobalAccess;
 import dashboard.database.DB_Access;
 import dashboard.database.DB_Access_Manager;
 import dashboard.enums.ChangeType;
+import dashboard.enums.ChangeTypeNew;
 import explorer.bl.ExplorerTreeModel;
 import explorer.io.ExplorerIO;
 import general.beans.io_objects.CommandRun;
@@ -228,14 +229,7 @@ public class ExplorerCommandPanel extends javax.swing.JPanel {
 //                }
                 System.out.println("ich bin hier");
                 if(DatabaseGlobalAccess.getInstance().isDbReachable()){
-                    for (dashboard.beans.ChangeType type : DatabaseGlobalAccess.getInstance().getAllChangeTypes()) {
-                        if(type.getBezeichnung() == "CHANGED"){
-                            ChangeNew change = new ChangeNew(LocalDateTime.now());
-                            change.setChangeType(type);
-                            change.setGegenstand(com.getDurchlauf_gegenstand());
-                            DB_Access_Manager.getInstance().updateData();
-                        }
-                    }
+                    DB_Access_Manager.getInstance().addChangeEntry(com, "CHANGED");
                 }
                 nodeList = ExplorerIO.getCurrentNodeList(Paths.get(com.getPath().toString(), "run.xml"), com.getDescription());
                 commandText = newName;

@@ -63,18 +63,6 @@ public class DB_Access_Manager {
         DatabaseGlobalAccess.getInstance().setDbReachable(true);
     }
 
-    public void addChangeEntry(DurchlaufgegenstandNew gegenstand, ChangeTypeNew changeType) {
-        ChangeNew change = new ChangeNew(LocalDateTime.now());
-        change.setNutzer(DatabaseGlobalAccess.getInstance().getCurrentNutzer());
-        change.setGegenstand(gegenstand);
-
-        for (ChangeType ctn : DatabaseGlobalAccess.getInstance().getAllChangeTypes()) {
-            if (ctn.getBezeichnung().equalsIgnoreCase(changeType.getIdentifier())) {
-                change.setChangeType(ctn);
-            }
-        }
-    }
-
     public void importProject(List<ProjectRun> prRuns) {
         List<Projekt> projektToImport = new LinkedList<>();
         List<Testgruppe> testGruppenToImport = new LinkedList<>();
@@ -113,6 +101,8 @@ public class DB_Access_Manager {
                                 System.out.println("ich bin nicht drin 3");
                                 com.setTestCase(tc);
                                 CommandsToImport.add(com);
+                            } else {
+                                com = tc.getCommands().get(tc.getCommands().indexOf(com));
                             }
                             command.setDurchlauf_gegenstand(com);
                         }
@@ -273,7 +263,6 @@ public class DB_Access_Manager {
 //            }
 //        }
 //    }
-
     public void updateData() {
         DatabaseGlobalAccess.getInstance().getEm().getTransaction().begin();
         DatabaseGlobalAccess.getInstance().getEm().getTransaction().commit();
@@ -338,7 +327,6 @@ public class DB_Access_Manager {
             }
         }
         change.setGegenstand(entity.getDurchlauf_gegenstand());
-        System.out.println("anohter one");
         change.setNutzer(DatabaseGlobalAccess.getInstance().getCurrentNutzer());
         try {
             updateData();
