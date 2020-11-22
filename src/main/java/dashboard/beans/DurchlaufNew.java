@@ -120,10 +120,18 @@ public class DurchlaufNew implements Serializable{
         return gegenstand;
     }
 
-    public void setGegenstand(List<DurchlaufgegenstandNew> gegenstand) {
-        this.gegenstand = gegenstand;
+    public void setGegenstand(List<DurchlaufgegenstandNew> allGegenstand) {
+        List<DurchlaufgegenstandNew> dGegenstand = new LinkedList<>();
+        
+        for (DurchlaufgegenstandNew gegenstand : allGegenstand) {
+            if(dGegenstand.contains(gegenstand)){
+                dGegenstand.add(gegenstand);
+            }
+        }
+        
+        this.gegenstand = dGegenstand;
         for (DurchlaufgegenstandNew durchlaufgegenstandNew : gegenstand) {
-            System.out.println(durchlaufgegenstandNew.getGegenstandid() + durchlaufgegenstandNew.getBezeichnung());
+            //System.out.println(durchlaufgegenstandNew.getGegenstandid() + durchlaufgegenstandNew.getBezeichnung());
            durchlaufgegenstandNew.getAllDurchlauf().add(this);
         }
       //  this.gegenstand.getAllDurchlauf().add(this);
