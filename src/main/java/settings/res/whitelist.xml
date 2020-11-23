@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<whitelist>
+     <entry>
+          <title>Uhrzeit</title>
+          <regex>\d\d\:\d\d</regex>
+          <type>DISPLAY</type>
+          <type>DRAWER</type>
+          <type>PRINTER</type>
+          <type>GSERVER</type>
+     </entry>
+     <entry>
+          <title>Datum</title>
+          <regex>\d\d\.\d\d\.\d\d\d\d</regex>
+          <type>DISPLAY</type>
+          <type>DRAWER</type>
+          <type>PRINTER</type>
+          <type>GSERVER</type>
+     </entry>
+     <entry>
+          <title>Bon Nummer</title>
+          <regex>Bon-Nr\.:\d\d\d.</regex>
+          <type>DISPLAY</type>
+          <type>DRAWER</type>
+          <type>PRINTER</type>
+          <type>GSERVER</type>
+     </entry>
+     <entry>
+          <title>GServer Phänomen</title>
+          <regex>"          \d\d\d\d\d\d</regex>
+          <type>GSERVER</type>
+     </entry>
+     <entry>
+          <title>Bediener mit Leerzeichen</title>
+          <regex>Bed\.: \d\d\d\d\d\d</regex>
+          <type>GSERVER</type>
+     </entry>
+     <entry>
+          <title>Bediener ohne Leerzeichen</title>
+          <regex>Bed\.:\d\d\d\d\d\d</regex>
+          <type>PRINTER</type>
+     </entry>
+</whitelist>
