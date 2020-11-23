@@ -1,5 +1,6 @@
 package simulator.commands.impl;
 
+
 import analyzer.bl.AnalyzerManager;
 import analyzer.bl.Whitelist;
 import analyzer.enums.ResultFileType;
@@ -25,12 +26,10 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-
+import simulator.beans.RuntimeEnv;
 import simulator.commands.ACommand;
 import simulator.communication.DTFConnection;
-import simulator.beans.RuntimeEnv;
 import simulator.bl.ExecutionManager;
-import simulator.interfaces.BackofficeAccess;
 import simulator.recorder.adapter.CheckpointAdapter;
 import simulator.recorder.adapter.ControllKeyAdapter;
 import simulator.recorder.adapter.HWCommandAdapter;
@@ -43,6 +42,8 @@ import simulator.recorder.adapter.PwdAdapter;
 import simulator.recorder.adapter.input.DtfScanCommand;
 import simulator.recorder.adapter.input.DtfTextInputCommand;
 import simulator.recorder.util.RecElementType;
+
+
 
 public class ExcecuteRecorderFileCommand
         extends ACommand {
@@ -80,7 +81,7 @@ public class ExcecuteRecorderFileCommand
 
     private boolean first = true;
 
-    public ExcecuteRecorderFileCommand(RuntimeEnv env, int startStep, Path testCasePath, int kassaNr, LocalDateTime timestamp) {
+    public ExcecuteRecorderFileCommand(RuntimeEnv env, Path testCasePath, int kassaNr, LocalDateTime timestamp) {
         objRuntimeEnv = env;
         dtfCon = new DTFConnection(objRuntimeEnv);
         this.testCasePath = testCasePath;
@@ -132,6 +133,7 @@ public class ExcecuteRecorderFileCommand
     @Override
     public boolean doCheck()
             throws Exception {
+        // TODO Vergleiche der Ergebnisse mit den Referenzen
         Path erg = testCasePath.getParent().getParent().getParent().resolve("erg").resolve(dtf.format(timestamp)).resolve(testCasePath.getParent().toFile().getName()).resolve(testCasePath.toFile().getName());
         Properties props = Mapper.getCashpointMapping(erg.resolve("erg_ref_mapping.properties").toString());
         List<File> references = Mapper.getDirectoriesOfDirectory(testCasePath.getParent().getParent().getParent().resolve("ref").toFile());
@@ -144,8 +146,7 @@ public class ExcecuteRecorderFileCommand
         String marker = ((Element) doc.getElementsByTagName("mark").item(0)).getAttribute("name");
 
         boolean error = false;
-
-        try {
+try {
             if (!AnalyzerManager.getInstance().trimLines(Whitelist.removeIgnoreSections(Whitelist.applyWhitelist(Files.readAllLines(erg.resolve(Mapper.getDirectoriesOfDirectory(erg.toFile()).get(kassaNr - 1).getName()).resolve("gserver_" + marker + ".txt")), ResultFileType.GSERVER)), ResultFileType.GSERVER)
                     .equals(AnalyzerManager.getInstance().trimLines(Whitelist.removeIgnoreSections(Whitelist.applyWhitelist(Files.readAllLines(ref.resolve("gserver_" + marker + ".txt")), ResultFileType.GSERVER)), ResultFileType.GSERVER))) {
                 logToArea("GSERVER", 1);
@@ -364,29 +365,17 @@ public class ExcecuteRecorderFileCommand
      * @param String command : Command welches an die Kasse gesendet werden soll
      */
     public void parseAndSendCommand(String command) {
-        if (ExecutionManager.getInstance().isStepLockActivated()) {
-            while (localStep == ExecutionManager.getInstance().getStepLock()) {
-                if (ExecutionManager.getInstance().getStepLock() == -1) {
-                    break;
-                }
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException ex) {
-
-                }
-            }
-            ExecutionManager.getInstance().log(command, ExecutionManager.LOGLEVEL.XML);
-        }
         if (first) {
             ExecutionManager.getInstance().log("                                             ", ExecutionManager.LOGLEVEL.SPEZIAL);
             first = false;
         }
         dtfCon.sendDTFXmlCommand(command);
+
         try {
             localStep++;
-            Thread.sleep(400);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
     }
 

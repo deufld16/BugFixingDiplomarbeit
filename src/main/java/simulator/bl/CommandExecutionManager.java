@@ -337,6 +337,7 @@ public class CommandExecutionManager implements Runnable {
                 bediener.add(getParent(list.get(0)).getEmpId() + "");
                 bedienerPass.add(getParent(list.get(0)).getPassword() + "");
                 laden.add(getParent(list.get(0)).getTllId());
+                System.out.println(getParent(list.get(0)).getTllId());
             }
         }
         return result;
@@ -560,6 +561,7 @@ public class CommandExecutionManager implements Runnable {
 
         ExecutionManager.getInstance().getParent().getBtNextStep().setEnabled(false);
         if (pathToErg != null && pathToRef != null) {
+            DatabaseGlobalAccess.getInstance().setWorkflow(true);
             GlobalAccess.getInstance().getTest_ide_main_frame().changeTool("analyzer");
             GlobalAccess.getInstance().getPaAnalyzer().activate(pathToRef, pathToErg);
         } else {

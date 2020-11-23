@@ -239,6 +239,9 @@ public class ExecutionManager {
     public void setTargets(List<ExplorerLayer> targets) {
         cnt = 0;
         this.targets = targets;
+        for (ExplorerLayer target : targets) {
+            System.out.println(target.getDurchlauf_gegenstand() + " bei Set");
+        }
         dlm.removeAllElements();
         for (ExplorerLayer target : targets) {
             if (target instanceof ProjectRun) {
@@ -323,6 +326,9 @@ public class ExecutionManager {
      */
     public void addTargets(List<ExplorerLayer> targets) {
         this.targets.addAll(targets);
+        for (ExplorerLayer target : targets) {
+            System.out.println(target.getDurchlauf_gegenstand() + " bei Set");
+        }
         int level = -1;
         for (ExplorerLayer target : targets) {
             if (target instanceof ProjectRun) {

@@ -23,6 +23,7 @@ import general.bl.GlobalAccess;
 import general.bl.GlobalParamter;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -273,30 +274,43 @@ public class AnalyzerManager {
             + " erneuert. Speichern?"));
         switch(selection) {
             case JOptionPane.YES_OPTION:
+                boolean saved = false;
                 for (ResultType newReference : newReferences) {
                     try {
                         ResultsIO.updateReferenceFile(
                                 newReference.getReference().getPath(),
                                 newReference.getLines());
+                        saved = true;
                     } catch (IOException ex) {
-                        ex.printStackTrace();
+                        JOptionPane.showMessageDialog(null, "Speichern der neuen Referenzen fehlgeschlagen!");
                     }
                 }
-//                Durchlauf currentRun = GlobalParamter.getInstance().getCurrentRun();
-//                if(currentRun != null) {
-//                    currentRun.setUebernahmeAnz(newReferences.size());
-//                    try {
-//                        if(GlobalParamter.getInstance().isStatistic_db_reachable()) {
-//                            DB_Access.getInstance().updateDurchlauf(currentRun);
-//                        }
-//                    } catch (SQLException ex) {
-//                        JOptionPane.showMessageDialog(null, "Fehler beim Aktualisieren der Statistikwerte");
-//                    }
-//                }
-                DurchlaufNew durchlauf = DatabaseGlobalAccess.getInstance().getDurchlauf();
-                if(durchlauf != null){
-                    durchlauf.setUebernahmeAnz(newReferences.size());
-                    DB_Access_Manager.getInstance().updateData();
+                
+                DurchlaufNew durchlauf = null;
+                try {
+                    if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
+                        if(DatabaseGlobalAccess.getInstance().isWorkflow()) {
+                            durchlauf = DatabaseGlobalAccess.getInstance().getDurchlauf();
+                        } else {
+                            durchlauf = DatabaseGlobalAccess.getInstance().getNewDurchlauf();
+                            durchlauf.setDurchlaufDatum(LocalDate.now());
+                            durchlauf.setNutzer(DatabaseGlobalAccess.getInstance().getCurrentNutzer());
+                        }
+                        if(durchlauf != null) {
+                            durchlauf.setUebernahmeAnz(newReferences.size());
+                            DB_Access_Manager.getInstance().updateData();
+                        }
+                    } else {
+                        throw new Exception("Datenbank nicht erreichbar");
+                    }
+                } catch(Exception ex) {
+                    JOptionPane.showMessageDialog(null, 
+                            "Datenbankverbindung fehlgeschlagen.\n"
+                          + "Statistikdaten können nicht gespeichert werden.");
+                }
+                
+                if(saved) {
+                    JOptionPane.showMessageDialog(null, "Referenzen erfolgreich abgespeichert.");
                 }
             case JOptionPane.NO_OPTION:
                 return true;
@@ -346,6 +360,15 @@ public class AnalyzerManager {
     }
     
     private class DiffExecutor implements Runnable {
+        
+        /**
+        * Anonymus class to run the diff process using Differ() class for all result files
+        * within testgroupsErg and mark the success of each and each layer 
+        * above the result file accordingly. 
+        * Furthermore, it takes necessary actions to update the UI with the recent
+        * developments.
+        */
+        
         private LoadingDLG ldlg;
 
         public DiffExecutor(LoadingDLG ldlg) {

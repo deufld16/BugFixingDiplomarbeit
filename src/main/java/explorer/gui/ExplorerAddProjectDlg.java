@@ -6,6 +6,7 @@
 package explorer.gui;
 
 import java.awt.Dimension;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -86,6 +87,11 @@ public class ExplorerAddProjectDlg extends javax.swing.JDialog {
         jPanel2.setLayout(new java.awt.GridLayout(1, 2));
 
         tfName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        tfName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                onEnter(evt);
+            }
+        });
         jPanel2.add(tfName);
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
@@ -144,6 +150,16 @@ public class ExplorerAddProjectDlg extends javax.swing.JDialog {
      * @param evt
      */
     private void onOk(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onOk
+        doOkAction();
+    }//GEN-LAST:event_onOk
+
+    private void onEnter(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_onEnter
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            doOkAction();
+        }
+    }//GEN-LAST:event_onEnter
+
+    private void doOkAction() {
         if (!tfName.getText().trim().isEmpty()) {
             name = tfName.getText();
             ok = true;
@@ -151,7 +167,7 @@ public class ExplorerAddProjectDlg extends javax.swing.JDialog {
         } else {
             JOptionPane.showMessageDialog(null, "Bitte füllen Sie die Beschreibung aus!", "Fehler", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_onOk
+    }
 
     /**
      * @param args the command line arguments

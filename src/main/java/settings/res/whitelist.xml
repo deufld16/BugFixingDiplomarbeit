@@ -25,17 +25,17 @@
           <type>GSERVER</type>
      </entry>
      <entry>
-          <title>Bubu</title>
+          <title>GServer Phänomen</title>
           <regex>"          \d\d\d\d\d\d</regex>
           <type>GSERVER</type>
      </entry>
      <entry>
-          <title>sfd</title>
+          <title>Bediener mit Leerzeichen</title>
           <regex>Bed\.: \d\d\d\d\d\d</regex>
           <type>GSERVER</type>
      </entry>
      <entry>
-          <title>Betina</title>
+          <title>Bediener ohne Leerzeichen</title>
           <regex>Bed\.:\d\d\d\d\d\d</regex>
           <type>PRINTER</type>
      </entry>

@@ -29,6 +29,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Pattern;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -1118,14 +1120,14 @@ public class ExplorerIO {
      */
     private static void adaptDescriptionOfTG(Path path, int index, ExplorerLayer layer) throws SAXException, IOException, ParserConfigurationException, TransformerException {
 //        try {
-            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse(path.toFile());
-            String oldDesc = layer.getDescription();
-            Node descNode = doc.getElementsByTagName("description").item(0);
-            String text = descNode.getTextContent();
-            text = text.replaceAll("Testgruppe_[0-9]+", "Testgruppe_" + index);
-            layer.setDescription(text);
+        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+        Document doc = docBuilder.parse(path.toFile());
+        String oldDesc = layer.getDescription();
+        Node descNode = doc.getElementsByTagName("description").item(0);
+        String text = descNode.getTextContent();
+        text = text.replaceAll("Testgruppe_[0-9]+", "Testgruppe_" + index);
+        layer.setDescription(text);
 //            if (GlobalParamter.getInstance().isStatistic_db_reachable()) {
 //                System.out.println("DSFSFSADFD");
 //                System.out.println("no exception wixxer");
@@ -1133,9 +1135,9 @@ public class ExplorerIO {
 //                    DB_Access.getInstance().updateEntry(layer, oldDesc);
 //                }
 //            }
-            descNode.setTextContent(text);
+        descNode.setTextContent(text);
 
-            writeXml(doc, new StreamResult(path.toFile()));
+        writeXml(doc, new StreamResult(path.toFile()));
 //        } catch (SQLException ex) {
 //            ex.printStackTrace();
 //        }
@@ -1251,6 +1253,20 @@ public class ExplorerIO {
         writeXml(document, new StreamResult(path.toFile()));
     }
 
+    private static void removeEmptyLines(Document doc) {
+        try {
+            XPath xp = XPathFactory.newInstance().newXPath();
+            NodeList nl = (NodeList) xp.evaluate("//text()[normalize-space(.)='']", doc, XPathConstants.NODESET);
+            
+            for (int i = 0; i < nl.getLength(); ++i) {
+                Node node = nl.item(i);
+                node.getParentNode().removeChild(node);
+            }
+        } catch (XPathExpressionException ex) {
+            System.out.println("Probleme beim Empty Lines löschen");
+        }
+    }
+
     /**
      * Outsourced method to write an xml file to the handed over (file)
      * destination
@@ -1260,6 +1276,7 @@ public class ExplorerIO {
      * @throws TransformerException
      */
     private static void writeXml(Document document, StreamResult streamResult) throws TransformerException {
+        removeEmptyLines(document);
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
         transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");

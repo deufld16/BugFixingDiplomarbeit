@@ -327,8 +327,12 @@ public class PaSettingsNew extends javax.swing.JPanel {
         lbCommands = new javax.swing.JLabel();
         paCommandSettings = new javax.swing.JPanel();
         btAddCommand = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         btAddType = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -980,7 +984,7 @@ public class PaSettingsNew extends javax.swing.JPanel {
                 onExpand(evt);
             }
         });
-        paCommandSettings.setLayout(new java.awt.GridLayout(3, 3));
+        paCommandSettings.setLayout(new java.awt.GridLayout(3, 5));
 
         btAddCommand.setBackground(new java.awt.Color(0, 0, 0));
         btAddCommand.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -995,7 +999,6 @@ public class PaSettingsNew extends javax.swing.JPanel {
             }
         });
         paCommandSettings.add(btAddCommand);
-        paCommandSettings.add(jLabel1);
 
         btAddType.setBackground(new java.awt.Color(0, 0, 0));
         btAddType.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -1010,6 +1013,11 @@ public class PaSettingsNew extends javax.swing.JPanel {
             }
         });
         paCommandSettings.add(btAddType);
+        paCommandSettings.add(jLabel11);
+        paCommandSettings.add(jLabel12);
+        paCommandSettings.add(jLabel13);
+        paCommandSettings.add(jLabel1);
+        paCommandSettings.add(jLabel14);
         paCommandSettings.add(jLabel2);
         paCommandSettings.add(jLabel3);
         paCommandSettings.add(jLabel4);
@@ -1027,7 +1035,7 @@ public class PaSettingsNew extends javax.swing.JPanel {
                     .addComponent(lbDashboard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(paDashboardSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lbAnalysator, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(paAnalysatorSettings, javax.swing.GroupLayout.DEFAULT_SIZE, 838, Short.MAX_VALUE)
+                    .addComponent(paAnalysatorSettings, javax.swing.GroupLayout.DEFAULT_SIZE, 1025, Short.MAX_VALUE)
                     .addComponent(lbExplorer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(paExplorerSettings, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lbRecorder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1574,6 +1582,10 @@ public class PaSettingsNew extends javax.swing.JPanel {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

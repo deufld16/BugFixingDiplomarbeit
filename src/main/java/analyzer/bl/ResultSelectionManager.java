@@ -150,19 +150,9 @@ public class ResultSelectionManager
             panel.setEventAllowedOnCb(false);
             dcbmCashpoint.removeAllElements();
             TestCaseErg tcErg = (TestCaseErg) dcbmTC.getSelectedItem();
-//            System.out.println("Alle Testfälle:");
-//            for (int i = 0; i < dcbmTC.getSize(); i++) {
-//                System.out.println("  "+dcbmTC.getElementAt(i));
-//            }
-//            System.out.println("Testfall: " + tcErg.getDescription());
-//            System.out.println("Testfall_1: " + panel.getSelectedTestcase().getDescription());
             if(tcErg != null) {
-                System.out.println("Kassenpunkte: " + tcErg.getCashpoints().stream().map(CashpointErg::getDescription).collect(Collectors.toList()));
                 List<CashpointErg> cps = tcErg.getCashpoints();
-                //tcErg.getCashpoints().forEach(e -> dcbmCashpoint.addElement(e));   
-                for (CashpointErg cashpoint : tcErg.getCashpoints()) {
-                    dcbmCashpoint.addElement(cashpoint);
-                }
+                tcErg.getCashpoints().forEach(e -> dcbmCashpoint.addElement(e));   
             }
             
             cashpointChanged();
@@ -180,10 +170,7 @@ public class ResultSelectionManager
             dcbmResult.removeAllElements();
             CashpointErg cpErg = (CashpointErg) dcbmCashpoint.getSelectedItem();
             if(cpErg != null) {
-                //cpErg.getResults().forEach(e -> dcbmResult.addElement(e));
-                for (Result result : cpErg.getResults()) {
-                    dcbmResult.addElement(result);
-                }
+                cpErg.getResults().forEach(e -> dcbmResult.addElement(e));
             }
             
             resultChanged();

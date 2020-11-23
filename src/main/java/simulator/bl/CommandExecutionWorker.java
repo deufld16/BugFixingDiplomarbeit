@@ -202,7 +202,7 @@ public class CommandExecutionWorker implements Callable<Map<Integer, List<Boolea
                     tmp = new DbimportCommand(runtimeEnv);
                     break;
                 case "ExecuteRecorderFileCommand":
-                    tmp = new ExcecuteRecorderFileCommand(runtimeEnv, 0, commandRun.getPath(), kassaNr, timestamp);
+                    tmp = new ExcecuteRecorderFileCommand(runtimeEnv, commandRun.getPath(), kassaNr, timestamp);
                     break;
                 case "GlobalCommand":
                     tmp = new CallGlobalCommand();

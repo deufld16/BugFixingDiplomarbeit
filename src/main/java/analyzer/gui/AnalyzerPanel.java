@@ -16,6 +16,7 @@ import analyzer.gui.components.DiffPane;
 import analyzer.gui.components.ResultTypeButton;
 import analyzer.gui.renderers.ComboboxRenderer;
 import analyzer.io.ResultsIO;
+import dashboard.bl.DatabaseGlobalAccess;
 import general.bl.ContainerKeyListener;
 import general.bl.GlobalAccess;
 import general.bl.GlobalMethods;
@@ -748,6 +749,7 @@ public class AnalyzerPanel extends javax.swing.JPanel {
     private void onCancel(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onCancel
         // TODO add your handling code here:
         deactivate();
+        DatabaseGlobalAccess.getInstance().setWorkflow(false);
     }//GEN-LAST:event_onCancel
 
     /**
@@ -759,6 +761,7 @@ public class AnalyzerPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         if(am.saveNewReferences()) {
             deactivate();
+            DatabaseGlobalAccess.getInstance().setWorkflow(false);
             GlobalAccess.getInstance().getTest_ide_main_frame().changeTool("explorer");
         }
     }//GEN-LAST:event_onFinish
