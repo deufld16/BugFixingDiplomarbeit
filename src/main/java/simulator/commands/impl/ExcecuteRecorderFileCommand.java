@@ -331,16 +331,16 @@ public class ExcecuteRecorderFileCommand
                             // }
                             break;
                         case LOGOUT:
-              try {
-                            Thread.sleep(2000);// Warten bis die Kasse umschaltet
-                        } catch (InterruptedException e) {
-                            System.out.println(e.getLocalizedMessage());
-                        }
+                            try {
+                                Thread.sleep(2000);// Warten bis die Kasse umschaltet
+                            } catch (InterruptedException e) {
+                                System.out.println(e.getLocalizedMessage());
+                            }
                         // Beispiel: <logout />
-                        LogoutAdapter logoutAdapter = new LogoutAdapter();
-                        strCommand = logoutAdapter.createLogoutCommand();
-                        isLogout = true;
-                        break;
+                            LogoutAdapter logoutAdapter = new LogoutAdapter();
+                            strCommand = logoutAdapter.createLogoutCommand();
+                            isLogout = true;
+                            break;
                         default:
                             System.out.println("<" + node.getNodeName() + "/>" + " not supported yet");
                             break;

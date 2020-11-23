@@ -27,7 +27,7 @@ public class PaymentAdapter
     String strPaySubId = attributes.getNamedItem("pay_sub").getNodeValue();
 
     strCommand += new DTFPaymentCommand(strPayId).getXml();// Zahlungsmittel Taste
-
+System.out.println("Maxi liebt JComponents");
     return strCommand;
   }
 

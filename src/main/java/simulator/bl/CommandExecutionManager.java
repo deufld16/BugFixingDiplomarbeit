@@ -337,6 +337,7 @@ public class CommandExecutionManager implements Runnable {
                 bediener.add(getParent(list.get(0)).getEmpId() + "");
                 bedienerPass.add(getParent(list.get(0)).getPassword() + "");
                 laden.add(getParent(list.get(0)).getTllId());
+                System.out.println(getParent(list.get(0)).getTllId());
             }
         }
         return result;

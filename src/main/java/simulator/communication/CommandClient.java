@@ -82,7 +82,6 @@ public class CommandClient implements Callable<Boolean> {
 
     @Override
     public Boolean call() throws Exception {
-        System.out.println("Hola");
         while (!Thread.interrupted()) {
             try {
                 //System.out.println("wait");
