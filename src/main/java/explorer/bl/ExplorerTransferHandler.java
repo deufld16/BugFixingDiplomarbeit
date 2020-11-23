@@ -359,7 +359,7 @@ public class ExplorerTransferHandler extends TransferHandler {
 //                        }
                         if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
                             if (DatabaseGlobalAccess.getInstance().getCurrentNutzer() != null) {
-                                DB_Access_Manager.getInstance().addChangeEntry((ExplorerLayer) source_node.getUserObject(), "CHANGED");
+                                DB_Access_Manager.getInstance().addChangeEntry((ExplorerLayer) source_node.getUserObject(), "MOVED");
                             }
                         }
                     }

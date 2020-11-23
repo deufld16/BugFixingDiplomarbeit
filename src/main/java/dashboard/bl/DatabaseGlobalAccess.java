@@ -37,6 +37,8 @@ public class DatabaseGlobalAccess {
 
     private EntityManagerFactory emf;
     private EntityManager em;
+    
+    private boolean workflow = false;
 
     private DatabaseGlobalAccess() {
     }
@@ -135,6 +137,14 @@ public class DatabaseGlobalAccess {
 
     public DurchlaufNew getDurchlauf() {
          return durchlauf.get(durchlauf.size()-1);
+    }
+
+    public boolean isWorkflow() {
+        return workflow;
+    }
+
+    public void setWorkflow(boolean workflow) {
+        this.workflow = workflow;
     }
 
 

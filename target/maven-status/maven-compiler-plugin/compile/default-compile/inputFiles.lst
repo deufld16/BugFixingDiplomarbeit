@@ -1,219 +1,219 @@
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\OverloadValuesDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\beans\ListItem.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\ACommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\beans\WhitelistEntry.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\PwdAdapter.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\database\Test.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\GeschenkkarteDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Nutzer.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\WarenruecknahmePreisDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\ICommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\CallGlobalCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\ControllKeyAdapter.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\beans\io_objects\CommandRun.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\beans\Testcase.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\io\IOChecker.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\SyscommandDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\interfaces\BackofficeAccess.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\LoginAdapter.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\beans\ReferenceFile.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\io\Mapper.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\gui\AnalyzerInitDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\beans\GuiComponent.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\database\DB_Database.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DtfTextInputCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\bl\TableHeaderRenderer.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\bl\TableModelWhitelist.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\gui\PaSettingsNew.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\bl\TableModelTestsysteme.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\WaitCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\gui\SimulatorPanel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\beans\io_objects\TestGroupRun.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\beans\TestGroupErg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\beans\Database.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DtfScanCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\gui\AnalyzerPanel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\TestCase.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\bl\GlobalMethods.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Durchlauf.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\DynamicInputDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\io\IOLoader.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\remote\ftp\FTPUpload.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\enums\ChangeType.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\CopyCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\beans\Backoffice.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\helper\VarReplace.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\HWCommandAdapter.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\beans\io_objects\ExplorerLayer.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\beans\io_objects\ProjectRun.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\bl\ResultSelectionManager.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Change.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\PaArticleTable.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\gui\AddNewCommandDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\DurchlaufNew.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\bl\TableModelKasse.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ArticleConfigSettingsDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\beans\Table.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\database\DB_CachedConnection.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\beans\Command.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\ftp\FTPUtilCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\io\Saver.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerTestgroupPanel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\MehrwertdienststornoDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\gui\components\SimilarityRateSettingsPanel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\GewinnspielDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\gui\AddWhitelistEntryDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\io\CommandsIO.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\ChangeType.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\main\DTFCommandsDaniel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\io\Loader.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\io\ResultsIO.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\remote\bl\RemoteExecutionManager.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\gui\PaFelderUI.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\database\DBProp.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\io\ExplorerIO.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\SquashDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\SqlQueryCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\bl\ExplorerTreeCellRenderer.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\gui\LoadingDLG.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ELoadingDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\enums\CashpointGroup.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\gui\GegenstandRenderer.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\bl\ContainerKeyListener.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\io\Loader.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\bl\Whitelist.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\enums\ChangeTypeNew.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerProjectPanel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\util\UserTokenUtil.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_CachedConnection.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\gui\components\DiffPane.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\remote\ftp\FTPUtil.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\CtrlCommandV2.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\gui\LoadingFrame.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_Database.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\gui\AddBackofficeDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\bl\ExplorerTransferHandler.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\communication\DTFConnection.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\DbimportCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\beans\CashpointErg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerAddTestgroupDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\util\RecorderResponseWriter.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\util\RecElementType.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\database\DB_Access.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\bl\CommandExecutionWorker.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\bl\ArtikelTableModel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\io\ConfigManager.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\CheckRepInZAMTlogCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\util\RecorderCheckpoint.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\constants\DBNames.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\gui\DashboardPanel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\beans\DynamicValue.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\JugendschutzDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\PaArticle.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\ItemAdapter.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\xml\RecorderXML.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerPanel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\util\ItemUtil.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Durchlaufgegenstand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\gui\AddCashpointDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\remote\gui\RemotePanel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\bl\ExplorerPopupMenuListener.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\beans\ResultType.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\io\IOSaver.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\IDTFCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\util\ELoadingInfo.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\MainFrame.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\bl\ExecutionManager.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\WarenruecknahmeDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerAddProjectDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Command.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\bl\DiffOptimizationWorker.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\beans\RuntimeEnv.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\bl\ExplorerTreeModel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\beans\TestCaseErg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\ShellCommandLX.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\database\test.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerAddCommandDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\ExportTableContentCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\beans\Testsystem.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\bl\HighlightPreparationWorker.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\AuthLimitsDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\gui\components\ResultTypeButton.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\gui\test.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\FTPCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\remote\communication\RemoteClient.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ChangePasswordDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\beans\Article.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\beans\Operation.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Testgruppe.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\util\NetworkUtilities.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\remote\ftp\FTPDownload.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerConfirmationDialog.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\bl\CommandExecutionManager.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\bl\AnalyzerManager.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ELoadingBonstornoDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_Access_Manager.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\NutzerNew.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_Properties.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\main\DTFCommands.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\gui\TestGUI.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DtfMotKeyCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\enums\DBNames_Display.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\gui\Test_IDE_MainFrame.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\enums\ResultFileType.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\bl\ExplorerKeyListener.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\PaFinance.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DTFPaymentCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\beans\Testgroup.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\ChkSyncCommandV2.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\guiRenderer\DisplayListRenderer.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\util\FileUtilities.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ArticleInformationDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerAddTestcaseDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\InitDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerCommandPanel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\bl\GlobalAccess.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\gui\WelcomePanel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Projekt.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\testing.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\beans\Karte.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\beans\io_objects\TestCaseRun.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\bl\TableModelBackoffice.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\EljoCommandV2.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\beans\AndereZahlungsmittel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\ChangeNew.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\PaymentAdapter.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\settings\bl\TableCellRenderer.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\beans\Result.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\object\RepsInZam.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\ExcecuteRecorderFileCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\OverloadDlg.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\guiRenderer\ArticleTableRenderer.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\bl\GlobalParamter.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\xml\XMLPreparator.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\communication\CommandClient.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\beans\DurchlaufgegenstandNew.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DTFKeyLockCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DtfDrawerCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerTestcasePanel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\beans\Field.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\bl\DatabaseGlobalAccess.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\bl\DisplayListModel.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\CheckpointAdapter.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DTFEloadingCommand.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\database\DBAccess.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_Access.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\enums\XMLOperations.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\bl\SimulatorActionListener.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\gui\renderers\ComboboxRenderer.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\analyzer\bl\Differ.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\util\register\ControlCall.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\explorer\database\DB_Properties.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\gui\InitDlg_old.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\beans\DynamicFunction.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\AbstractAdapter.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\LogoutAdapter.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\recorder\guiOperations\GUIOperations.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\PauseAdapter.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\general\enums\Tools.java
-C:\Users\Maxi\Documents\HTBLA\Diplomarbeit\Implementierung\source_jpa_2\BugFixingDiplomarbeit\src\main\java\simulator\beans\Kasse.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\FTPCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\util\RecElementType.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\beans\Database.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\beans\Operation.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\constants\DBNames.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\beans\WhitelistEntry.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\NutzerNew.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Nutzer.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\WarenruecknahmeDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\bl\ExplorerPopupMenuListener.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\testing.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\main\DTFCommands.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\beans\io_objects\TestCaseRun.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\InitDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Durchlaufgegenstand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\GeschenkkarteDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\communication\CommandClient.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\gui\TestGUI.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\io\IOLoader.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\remote\bl\RemoteExecutionManager.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\bl\HighlightPreparationWorker.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\bl\ContainerKeyListener.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\enums\XMLOperations.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\xml\RecorderXML.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\AbstractAdapter.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\remote\ftp\FTPUpload.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\gui\SimulatorPanel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\JugendschutzDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\database\DB_Database.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\gui\test.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\HWCommandAdapter.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\beans\Karte.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\bl\TableModelTestsysteme.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\io\ResultsIO.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\util\RecorderCheckpoint.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\IDTFCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\bl\AnalyzerManager.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\gui\renderers\ComboboxRenderer.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\util\RecorderResponseWriter.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\PauseAdapter.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\gui\PaFelderUI.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Change.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DtfDrawerCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\bl\SimulatorActionListener.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\DbimportCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\gui\LoadingFrame.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\beans\Field.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Projekt.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\gui\AddNewCommandDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\beans\Command.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\xml\XMLPreparator.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\guiOperations\GUIOperations.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerPanel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\beans\ResultType.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\beans\Backoffice.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\ExcecuteRecorderFileCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\bl\Whitelist.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerTestcasePanel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\io\Loader.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\ControllKeyAdapter.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\enums\Tools.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\enums\ResultFileType.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\beans\CashpointErg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerAddCommandDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DTFEloadingCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\io\ExplorerIO.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\io\CommandsIO.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ELoadingBonstornoDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\ShellCommandLX.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\CtrlCommandV2.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\communication\DTFConnection.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\io\ConfigManager.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\OverloadValuesDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\util\UserTokenUtil.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\util\ELoadingInfo.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\ExportTableContentCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\bl\Differ.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\beans\TestGroupErg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\database\Test.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ArticleInformationDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Command.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\SqlQueryCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\ftp\FTPUtilCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DtfMotKeyCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\bl\ResultSelectionManager.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\enums\DBNames_Display.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_Properties.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\CheckpointAdapter.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\helper\VarReplace.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\bl\TableModelBackoffice.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\CheckRepInZAMTlogCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\io\IOSaver.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\bl\TableCellRenderer.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\gui\AnalyzerInitDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\gui\AnalyzerPanel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\beans\RuntimeEnv.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\GewinnspielDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\bl\CommandExecutionManager.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ELoadingDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\InitDlg_old.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\beans\io_objects\TestGroupRun.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\bl\DatabaseGlobalAccess.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\beans\DynamicValue.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerTestgroupPanel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\database\DBProp.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\DurchlaufgegenstandNew.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\enums\ChangeType.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Durchlauf.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\SyscommandDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\bl\ExplorerTransferHandler.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_Access_Manager.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\bl\CommandExecutionWorker.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\beans\io_objects\CommandRun.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\SquashDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\database\DB_CachedConnection.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ArticleConfigSettingsDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\beans\Article.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\PaArticle.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_Access.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DTFKeyLockCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\bl\ExplorerTreeCellRenderer.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\DynamicInputDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\WaitCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\main\DTFCommandsDaniel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\MainFrame.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\ICommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\remote\gui\RemotePanel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\bl\GlobalParamter.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\beans\DynamicFunction.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\gui\components\DiffPane.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_Database.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\OverloadDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\PwdAdapter.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\beans\Testgroup.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\beans\io_objects\ExplorerLayer.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\bl\ExecutionManager.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\bl\TableModelKasse.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\gui\PaSettingsNew.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\interfaces\BackofficeAccess.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\util\ItemUtil.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\bl\ExplorerTreeModel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\remote\ftp\FTPDownload.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerCommandPanel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\bl\TableModelWhitelist.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\MehrwertdienststornoDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\CallGlobalCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\guiRenderer\DisplayListRenderer.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\bl\GlobalMethods.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\beans\Testcase.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\gui\WelcomePanel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\gui\Test_IDE_MainFrame.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerAddTestgroupDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\remote\communication\RemoteClient.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\TestCase.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\io\IOChecker.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\PaArticleTable.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\CopyCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\beans\io_objects\ProjectRun.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\ACommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\bl\GlobalAccess.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\database\test.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\beans\Result.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\database\DB_Properties.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\io\Loader.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_CachedConnection.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\io\Saver.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\EljoCommandV2.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\beans\Testsystem.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\gui\GegenstandRenderer.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerAddTestcaseDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\gui\components\ResultTypeButton.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\PaFinance.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\beans\Table.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\io\Mapper.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\bl\TableHeaderRenderer.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\gui\AddWhitelistEntryDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\database\DBAccess.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\LogoutAdapter.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\beans\AndereZahlungsmittel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\gui\LoadingDLG.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\bl\DiffOptimizationWorker.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\beans\Kasse.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\bl\DisplayListModel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DtfTextInputCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DtfScanCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\LoginAdapter.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\beans\ListItem.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\ChkSyncCommandV2.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\DurchlaufNew.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\enums\ChangeTypeNew.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\commands\object\RepsInZam.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\ItemAdapter.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Testgruppe.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\util\NetworkUtilities.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\util\FileUtilities.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\general\beans\GuiComponent.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\gui\DashboardPanel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\bl\ExplorerKeyListener.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\WarenruecknahmePreisDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerProjectPanel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\gui\components\SimilarityRateSettingsPanel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\gui\AddCashpointDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\ChangeNew.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\remote\ftp\FTPUtil.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ChangePasswordDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\beans\TestCaseErg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerConfirmationDialog.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerAddProjectDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\AuthLimitsDlg.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\beans\ReferenceFile.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\guiRenderer\ArticleTableRenderer.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\recorder\bl\ArtikelTableModel.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DTFPaymentCommand.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\analyzer\enums\CashpointGroup.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\dashboard\beans\ChangeType.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\util\register\ControlCall.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\explorer\database\DB_Access.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\PaymentAdapter.java
+E:\Schule\5DHIF\SYP U\BugFixingDiplomarbeit\src\main\java\settings\gui\AddBackofficeDlg.java

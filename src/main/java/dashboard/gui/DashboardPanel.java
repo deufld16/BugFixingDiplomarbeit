@@ -208,6 +208,11 @@ public class DashboardPanel extends javax.swing.JPanel {
         btUpdate.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         btUpdate.setForeground(new java.awt.Color(255, 255, 255));
         btUpdate.setText("Update");
+        btUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onUpdate(evt);
+            }
+        });
         paButton.add(btUpdate);
         paButton.add(jLabel9);
         paButton.add(jLabel10);
@@ -244,6 +249,10 @@ public class DashboardPanel extends javax.swing.JPanel {
 //        }
     }//GEN-LAST:event_onCbHistory
 
+    private void onUpdate(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onUpdate
+        updateChart();
+    }//GEN-LAST:event_onUpdate
+
     public synchronized void updateChart() {
         try {
             if (cbHistory.getSelectedItem().equals("Durchlaufstatistik")) {
@@ -266,7 +275,7 @@ public class DashboardPanel extends javax.swing.JPanel {
                     int tmpSuccess = 0;
                     int tmpRefs = 0;
                     try {
-                        if (((Nutzer) cbUser.getSelectedItem()).getNutzerid() == -1) {
+                        if (((NutzerNew) cbUser.getSelectedItem()).getUsername().equalsIgnoreCase("Übersicht")) {
                             //for (Durchlauf durch : DB_Access.getInstance().selectRun(dates.get(i), dates.get(i + 1))) {
                             for (DurchlaufNew durch : DB_Access_Manager.getInstance().selectRun(dates.get(i), dates.get(i + 1))) {
                                 tmpFail += durch.getFehlgeschlagen();
@@ -324,7 +333,7 @@ public class DashboardPanel extends javax.swing.JPanel {
                     int tmpChange = 0;
                     try {
                         //System.out.println("äalsdkfaksäödlka");
-                        if (((Nutzer) cbUser.getSelectedItem()).getNutzerid() == -1) {
+                        if (((NutzerNew) cbUser.getSelectedItem()).getUsername().equalsIgnoreCase("Übersicht")) {
                             //System.out.println("a");
                             //for (Change change : DB_Access.getInstance().selectChanges(dates.get(i), dates.get(i + 1))) {
                             for (ChangeNew change : DB_Access_Manager.getInstance().selectChanges(dates.get(i), dates.get(i + 1))) {
@@ -344,6 +353,7 @@ public class DashboardPanel extends javax.swing.JPanel {
                                         tmpState++;
                                         break;
                                     case "ADDED":
+                                        System.out.println(change.getChangeType());
                                         tmpAdd++;
                                         break;
                                 }
@@ -367,6 +377,7 @@ public class DashboardPanel extends javax.swing.JPanel {
                                         tmpState++;
                                         break;
                                     case "ADDED":
+                                        System.out.println(change.getChangeType());
                                         tmpAdd++;
                                         break;
                                 }
@@ -383,11 +394,12 @@ public class DashboardPanel extends javax.swing.JPanel {
                     state.add(tmpState);
                     changed.add(tmpChange);
                 }
+                System.out.println(changed);
                 chart.addSeries("Entfernt", getXDisplay(getXAxisData(startDate, endDate), daysBetween(startDate, endDate)), delete, null);
-                chart.addSeries("Verändert", getXDisplay(getXAxisData(startDate, endDate), daysBetween(startDate, endDate)), add, null);
+                chart.addSeries("Verändert", getXDisplay(getXAxisData(startDate, endDate), daysBetween(startDate, endDate)), changed, null);
                 chart.addSeries("Verschoben", getXDisplay(getXAxisData(startDate, endDate), daysBetween(startDate, endDate)), move, null);
                 chart.addSeries("Inhalt verändert", getXDisplay(getXAxisData(startDate, endDate), daysBetween(startDate, endDate)), state, null);
-                chart.addSeries("Hinzugefügt", getXDisplay(getXAxisData(startDate, endDate), daysBetween(startDate, endDate)), changed, null);
+                chart.addSeries("Hinzugefügt", getXDisplay(getXAxisData(startDate, endDate), daysBetween(startDate, endDate)), add, null);
 
                 chart.removeSeries("Erfolgreich");
                 chart.removeSeries("Fehlgeschlagen");
@@ -403,7 +415,7 @@ public class DashboardPanel extends javax.swing.JPanel {
     public void refillUsers() {
         dcbmUser = new DefaultComboBoxModel();
         cbUser.setModel(dcbmUser);
-        dcbmUser.addElement(new Nutzer(-1, "Übersicht"));
+        dcbmUser.addElement(new NutzerNew("Übersicht"));
 
 //        try {
 //            if (GlobalParamter.getInstance().isStatistic_db_reachable()) {

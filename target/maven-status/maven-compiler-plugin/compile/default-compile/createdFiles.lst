@@ -63,6 +63,7 @@ recorder\gui\dlg\ArticleConfigSettingsDlg$7.class
 recorder\gui\PaArticle$22.class
 explorer\bl\ExplorerPopupMenuListener.class
 simulator\gui\SimulatorPanel.class
+explorer\gui\ExplorerAddCommandDlg$8$1.class
 simulator\constants\DBNames.class
 settings\bl\TableModelKasse.class
 recorder\gui\PaArticle.class
@@ -87,6 +88,7 @@ recorder\gui\dlg\JugendschutzDlg$2.class
 recorder\gui\InitDlg$3.class
 settings\gui\AddCashpointDlg$5.class
 simulator\recorder\adapter\input\DtfMotKeyCommand.class
+explorer\gui\ExplorerAddCommandDlg$8.class
 explorer\gui\PaFelderUI$5.class
 general\gui\Test_IDE_MainFrame$26.class
 settings\gui\PaSettingsNew$23.class
@@ -223,7 +225,6 @@ simulator\recorder\adapter\input\DTFPaymentCommand.class
 settings\gui\PaSettingsNew$29.class
 simulator\commands\impl\DbimportCommand.class
 explorer\gui\ExplorerAddCommandDlg$2.class
-explorer\gui\ExplorerAddTestcaseDlg$3$1.class
 explorer\gui\ExplorerTestgroupPanel.class
 recorder\gui\dlg\GeschenkkarteDlg$6.class
 explorer\gui\ExplorerPanel$9.class
@@ -270,6 +271,7 @@ explorer\gui\ExplorerCommandPanel.class
 settings\bl\TableModelWhitelist.class
 recorder\gui\dlg\ChangePasswordDlg.class
 simulator\beans\Testgroup.class
+explorer\gui\ExplorerAddTestgroupDlg$4$1.class
 analyzer\beans\CashpointErg.class
 recorder\gui\InitDlg$4.class
 settings\gui\AddCashpointDlg$4.class
@@ -311,7 +313,6 @@ simulator\recorder\util\RecElementType.class
 recorder\gui\dlg\AuthLimitsDlg$1.class
 recorder\gui\dlg\ArticleConfigSettingsDlg$7$1.class
 recorder\gui\dlg\GewinnspielDlg$3$1.class
-explorer\gui\ExplorerAddTestgroupDlg$3$1.class
 recorder\gui\dlg\WarenruecknahmeDlg$4.class
 explorer\gui\ExplorerTestcasePanel.class
 recorder\xml\XMLPreparator.class
@@ -342,7 +343,6 @@ simulator\commands\impl\ExcecuteRecorderFileCommand$1.class
 settings\gui\AddWhitelistEntryDlg.class
 analyzer\beans\ReferenceFile.class
 settings\gui\AddBackofficeDlg$2.class
-explorer\gui\ExplorerAddProjectDlg$3$1.class
 recorder\gui\dlg\ELoadingDlg$4.class
 analyzer\bl\HighlightPreparationWorker.class
 settings\gui\AddCashpointDlg$5$1.class
@@ -350,6 +350,7 @@ recorder\gui\dlg\WarenruecknahmePreisDlg$3.class
 settings\bl\TableCellRenderer.class
 recorder\gui\dlg\SquashDlg$1.class
 recorder\gui\PaArticle$32.class
+explorer\gui\ExplorerAddTestgroupDlg$4.class
 explorer\gui\ExplorerTestcasePanel$2.class
 recorder\gui\PaArticle$1.class
 simulator\bl\SimulatorActionListener$1.class
@@ -360,6 +361,7 @@ recorder\gui\dlg\SquashDlg$4.class
 simulator\recorder\adapter\HWCommandAdapter.class
 simulator\recorder\util\RecorderResponseWriter.class
 analyzer\gui\AnalyzerPanel.class
+explorer\gui\ExplorerAddTestcaseDlg$4$1.class
 simulator\bl\CommandExecutionManager.class
 analyzer\beans\ResultType.class
 explorer\gui\ExplorerConfirmationDialog$3$1.class
@@ -459,7 +461,6 @@ settings\gui\PaSettingsNew$11.class
 general\io\Loader.class
 settings\gui\AddNewCommandDlg.class
 explorer\gui\ExplorerAddTestgroupDlg.class
-explorer\gui\ExplorerAddCommandDlg$7$1.class
 analyzer\gui\components\DiffPane.class
 remote\communication\RemoteClient.class
 analyzer\gui\AnalyzerPanel$4.class
@@ -481,6 +482,7 @@ simulator\communication\CommandClient.class
 simulator\database\DBProp.class
 explorer\enums\DBNames_Display.class
 general\gui\Test_IDE_MainFrame$16.class
+explorer\gui\ExplorerAddTestcaseDlg$4.class
 dashboard\gui\DashboardPanel$1.class
 general\beans\io_objects\TestGroupRun.class
 dashboard\gui\LoadingDLG.class
@@ -519,6 +521,7 @@ recorder\gui\MainFrame$6.class
 recorder\gui\PaArticle$6.class
 general\gui\Test_IDE_MainFrame$11.class
 analyzer\gui\AnalyzerPanel$2.class
+explorer\gui\ExplorerAddProjectDlg$4$1.class
 recorder\gui\PaArticle$35.class
 explorer\beans\Field.class
 recorder\gui\MainFrame$9.class
@@ -558,6 +561,7 @@ recorder\gui\PaArticle$4.class
 recorder\gui\PaFinance$13.class
 explorer\bl\ExplorerTransferHandler.class
 settings\gui\AddNewCommandDlg$5.class
+explorer\gui\ExplorerAddProjectDlg$4.class
 settings\gui\PaSettingsNew$13.class
 general\beans\io_objects\ProjectRun.class
 dashboard\gui\LoadingDLG$Checker.class
