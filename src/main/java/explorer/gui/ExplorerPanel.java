@@ -639,11 +639,11 @@ public class ExplorerPanel extends javax.swing.JPanel {
                 if (tgd.isOk()) {
                     TestGroupRun addTg = tgd.getTg();
                     //get number of last testgroup and set new number (old number +1)
-                    int num = getNumberOfLastTestgroup(((ProjectRun) (ExplorerLayer) node.getUserObject()));
+                    int num = getNumberOfLastTestgroup(((ProjectRun) (ExplorerLayer) node.getUserObject())) + 1;
 //                    int num = getNumberOfLastTestgroup(GlobalParamter.getInstance().getWorkingProjects().get(GlobalParamter.getInstance().getWorkingProjects().size() - 1)) + 1;
                     //set path and description with new number
-                    addTg.setPath(Paths.get(((ProjectRun) node.getUserObject()).getPath().toString(), "run", String.format("%03d_TG", num + 1)));
-                    addTg.setDescription("Testgruppe_" + (num + 1) + " - " + addTg.getDescription());
+                    addTg.setPath(Paths.get(((ProjectRun) node.getUserObject()).getPath().toString(), "run", String.format("%03d_TG", num)));
+                    addTg.setDescription("Testgruppe_" + num + " - " + addTg.getDescription());
                     ExplorerIO.addTestGroup(addTg);
                     //create TreeNode for new TG and take all necessary actions
                     DefaultMutableTreeNode testGroupNode = new DefaultMutableTreeNode(addTg);
@@ -666,7 +666,7 @@ public class ExplorerPanel extends javax.swing.JPanel {
 //
 //                    }
                     if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
-                        ((Testgruppe)addTg.getDurchlauf_gegenstand()).setProjekt((Projekt) ((ExplorerLayer) node.getUserObject()).getDurchlauf_gegenstand());
+                        ((Testgruppe) addTg.getDurchlauf_gegenstand()).setProjekt((Projekt) ((ExplorerLayer) node.getUserObject()).getDurchlauf_gegenstand());
                         if (DatabaseGlobalAccess.getInstance().getCurrentNutzer() != null) {
                             DB_Access_Manager.getInstance().addChangeEntry(addTg, "ADDED");
                         } else {
@@ -903,7 +903,7 @@ public class ExplorerPanel extends javax.swing.JPanel {
             etm.nodeStructureChanged(addComm.getParentNode());
 
             if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
-                ((Command)comm.getDurchlauf_gegenstand()).setTestCase((TestCase) addComm.getParentTC().getDurchlauf_gegenstand());
+                ((Command) comm.getDurchlauf_gegenstand()).setTestCase((TestCase) addComm.getParentTC().getDurchlauf_gegenstand());
                 if (DatabaseGlobalAccess.getInstance().getCurrentNutzer() != null) {
                     DB_Access_Manager.getInstance().addChangeEntry(comm, "ADDED");
                 } else {
@@ -986,10 +986,10 @@ public class ExplorerPanel extends javax.swing.JPanel {
                                     ExplorerIO.removeNode(nodeExpl.getPath().toFile());
                                     ExplorerIO.renameTestGroups(Paths.get(((ExplorerLayer) parent.getUserObject()).getPath().toString(), "run"), getDirectChildren(parent));
                                 } else if (nodeExpl instanceof TestCaseRun) {
-                                    int index = parent.getIndex(node);
-//                                ((TestGroupRun) parent.getUserObject()).getTestCases().remove((TestCaseRun) nodeExpl);
+//                                    int index = parent.getIndex(node);
+//                                    ((TestGroupRun) parent.getUserObject()).getTestCases().remove(index);
+                                    ((TestGroupRun) parent.getUserObject()).getTestCases().remove((TestCaseRun) nodeExpl);
                                     oldDesc = nodeExpl.getDescription();
-                                    ((TestGroupRun) parent.getUserObject()).getTestCases().remove(index);
                                     ExplorerIO.removeNode(nodeExpl.getPath().toFile());
                                     ExplorerIO.renameTestCases(((ExplorerLayer) parent.getUserObject()).getPath(), getDirectChildren(parent));
                                 } else if (nodeExpl instanceof CommandRun) {
@@ -999,7 +999,7 @@ public class ExplorerPanel extends javax.swing.JPanel {
 
                                 if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
                                     DB_Access_Manager.getInstance().deleteNode(nodeExpl.getDurchlauf_gegenstand());
-                                    if (DatabaseGlobalAccess.getInstance().getCurrentNutzer() != null) {                                        
+                                    if (DatabaseGlobalAccess.getInstance().getCurrentNutzer() != null) {
                                         DB_Access_Manager.getInstance().addChangeEntry(nodeExpl, "DELETED");
                                         if (parent.getUserObject() instanceof ExplorerLayer) {
                                             DB_Access_Manager.getInstance().addChangeEntry((ExplorerLayer) parent.getUserObject(), "STATECHANGED");

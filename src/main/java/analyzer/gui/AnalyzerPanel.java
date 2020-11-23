@@ -16,6 +16,7 @@ import analyzer.gui.components.DiffPane;
 import analyzer.gui.components.ResultTypeButton;
 import analyzer.gui.renderers.ComboboxRenderer;
 import analyzer.io.ResultsIO;
+import dashboard.bl.DatabaseGlobalAccess;
 import general.bl.ContainerKeyListener;
 import general.bl.GlobalAccess;
 import general.bl.GlobalMethods;
@@ -28,6 +29,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import javax.swing.BorderFactory;
+import javax.swing.JComboBox;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
@@ -200,9 +202,6 @@ public class AnalyzerPanel extends javax.swing.JPanel {
         sp2.getViewport().addChangeListener(CL_SP_2);
         updateUI();
         
-//        am = AnalyzerManager.getInstance();
-//        am.setPanel(this);
-        
         rsm = ResultSelectionManager.getInstance();
         rsm.setPanel(this);        
         rsm.setPaTabs(paTabs);
@@ -254,10 +253,6 @@ public class AnalyzerPanel extends javax.swing.JPanel {
         if(miText.endsWith("aufheben")) {
             sp1.getViewport().removeChangeListener(CL_SP_1);
             sp2.getViewport().removeChangeListener(CL_SP_2);
-//            sp1.getViewport().removeAll();
-//            sp1.setViewportView(refPane);
-//            sp2.getViewport().removeAll();
-//            sp2.setViewportView(ergPane);
             miText = "Scrollverbindung von ref und erg erzeugen";
         } else {
             sp1.getViewport().addChangeListener(CL_SP_1);
@@ -480,6 +475,10 @@ public class AnalyzerPanel extends javax.swing.JPanel {
     public void clearDiffPanes() {
         refPane.setText("");
         ergPane.setText("");
+    }
+    
+    public TestCaseErg getSelectedTestcase() {
+        return cbSelectTC.getItemAt(cbSelectTC.getSelectedIndex());
     }
 
     public List<ResultTypeButton> getTypeTabs() {
@@ -750,6 +749,7 @@ public class AnalyzerPanel extends javax.swing.JPanel {
     private void onCancel(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onCancel
         // TODO add your handling code here:
         deactivate();
+        DatabaseGlobalAccess.getInstance().setWorkflow(false);
     }//GEN-LAST:event_onCancel
 
     /**
@@ -761,6 +761,7 @@ public class AnalyzerPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         if(am.saveNewReferences()) {
             deactivate();
+            DatabaseGlobalAccess.getInstance().setWorkflow(false);
             GlobalAccess.getInstance().getTest_ide_main_frame().changeTool("explorer");
         }
     }//GEN-LAST:event_onFinish

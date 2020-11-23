@@ -9,6 +9,7 @@ import dashboard.beans.Testgruppe;
 import dashboard.bl.DatabaseGlobalAccess;
 import general.beans.io_objects.TestGroupRun;
 import java.awt.Dimension;
+import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.LinkedList;
@@ -118,6 +119,11 @@ public class ExplorerAddTestgroupDlg extends javax.swing.JDialog {
         jPanel2.add(tfEmpPass);
 
         tfTllId.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        tfTllId.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                onEnter(evt);
+            }
+        });
         jPanel2.add(tfTllId);
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
@@ -176,6 +182,16 @@ public class ExplorerAddTestgroupDlg extends javax.swing.JDialog {
      * @param evt
      */
     private void onOk(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onOk
+        doOkAction();
+    }//GEN-LAST:event_onOk
+
+    private void onEnter(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_onEnter
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            doOkAction();
+        }
+    }//GEN-LAST:event_onEnter
+
+    private void doOkAction() {
         try {
             if (!tfEmpId.getText().trim().isEmpty() && !tfTllId.getText().trim().isEmpty()
                     && !tfEmpPass.getText().trim().isEmpty() && !tfGroupName.getText().trim().isEmpty()) {
@@ -193,7 +209,7 @@ public class ExplorerAddTestgroupDlg extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(null, "Bitte geben Sie für die Bedienernr.,\ndas Passwort und die Ladennr.\nnur Zahlen ein!",
                     "Fehler", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_onOk
+    }
 
     /**
      * @param args the command line arguments

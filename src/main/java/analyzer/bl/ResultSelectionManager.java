@@ -14,6 +14,7 @@ import analyzer.gui.AnalyzerPanel;
 import analyzer.gui.components.ResultTypeButton;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JPanel;
@@ -150,7 +151,8 @@ public class ResultSelectionManager
             dcbmCashpoint.removeAllElements();
             TestCaseErg tcErg = (TestCaseErg) dcbmTC.getSelectedItem();
             if(tcErg != null) {
-                tcErg.getCashpoints().forEach(e -> dcbmCashpoint.addElement(e));                
+                List<CashpointErg> cps = tcErg.getCashpoints();
+                tcErg.getCashpoints().forEach(e -> dcbmCashpoint.addElement(e));   
             }
             
             cashpointChanged();

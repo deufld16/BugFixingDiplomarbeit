@@ -1055,6 +1055,7 @@ public class Test_IDE_MainFrame extends javax.swing.JFrame {
                     case "dashboard":
                         GlobalMethods.getInstance().changeTool(Tools.DASHBOARD);
                         ((JLabel) comp).setIcon(general.io.Loader.loadImage("house_black_v2.png", 70, 70));
+                        GlobalAccess.getInstance().getPaDashboard().refillUsers();
                         break;
                     case "explorer":
                         GlobalMethods.getInstance().changeTool(Tools.EXPLORER);
