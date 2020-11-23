@@ -258,6 +258,15 @@ public class ExplorerAddCommandDlg extends javax.swing.JDialog {
         }
 
         paTextFields.add(returnPanelForType(subnodesProCommand.get(commandTyp)));
+        (((JTextField) ((JPanel) paTextFields.getComponent(0)).getComponent(((JPanel) paTextFields.getComponent(0)).getComponentCount() - 1)))
+                .addKeyListener(new KeyAdapter() {
+                    @Override
+                    public void keyReleased(KeyEvent e) {
+                        if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                            doOkAction();
+                        }
+                    }
+                });
 
         if (commandTyp.equalsIgnoreCase("ExportTableContentCommand")) {
             setSize(new Dimension(1000, 1000));
@@ -951,6 +960,10 @@ public class ExplorerAddCommandDlg extends javax.swing.JDialog {
      * @param evt
      */
     private void onOk(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onOk
+        doOkAction();
+    }//GEN-LAST:event_onOk
+
+    private void doOkAction() {
         for (int i = 0; i < nodeList.getLength(); i++) {
             if (nodeList.item(i).getNodeName().equals("#text")) {
                 nodeList.item(i).getParentNode().removeChild(nodeList.item(i));
@@ -1106,7 +1119,7 @@ public class ExplorerAddCommandDlg extends javax.swing.JDialog {
                     + "inkorrekt, Kommando konnte nicht erstellt werden");
             return;
         }
-    }//GEN-LAST:event_onOk
+    }
 
     /**
      * Method which is being used to remove any kind of bon.xmls which have been
