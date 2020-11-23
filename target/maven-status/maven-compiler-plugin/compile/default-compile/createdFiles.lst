@@ -102,6 +102,7 @@ simulator\recorder\adapter\AbstractAdapter.class
 general\io\Mapper.class
 recorder\gui\dlg\ArticleInformationDlg$1$1.class
 analyzer\beans\TestGroupErg.class
+dashboard\gui\DashboardPanel$4.class
 recorder\gui\dlg\ELoadingDlg.class
 remote\ftp\FTPUtil.class
 recorder\beans\DynamicValue.class
