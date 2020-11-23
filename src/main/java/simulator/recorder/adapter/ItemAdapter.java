@@ -2,13 +2,14 @@ package simulator.recorder.adapter;
 
 import org.w3c.dom.NamedNodeMap;
 
+
+import simulator.recorder.adapter.AbstractAdapter;
 import simulator.recorder.adapter.input.DTFEloadingCommand;
 import simulator.recorder.adapter.input.DtfMotKeyCommand;
 import simulator.recorder.adapter.input.DtfScanCommand;
 import simulator.recorder.adapter.input.DtfTextInputCommand;
 import simulator.recorder.util.ELoadingInfo;
 import simulator.util.ItemUtil;
-import simulator.recorder.adapter.AbstractAdapter;
 
 /**
  * this class generates for one item all necessary recorder lines
@@ -81,7 +82,7 @@ public class ItemAdapter
       strCommand += new DtfMotKeyCommand(DtfMotKeyCommand.EINGABE).getXml();
     }
 
-    if (ean.startsWith("51"))// Preiseingabe erforderlich
+    if (containsAttr(attributes, "price"))// Preiseingabe erforderlich
     {
       String strPrice = attributes.getNamedItem("price").getNodeValue();
       strCommand += new DtfTextInputCommand(strPrice).getXml();

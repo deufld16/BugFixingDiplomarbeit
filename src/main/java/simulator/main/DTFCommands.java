@@ -29,7 +29,7 @@ public class DTFCommands {
    */
   public void excecuteSingleRecorderFile(RuntimeEnv env, String strRecorderPath) {
 
-    ExcecuteRecorderFileCommand recCommander = new ExcecuteRecorderFileCommand(env,0,Paths.get(""),0,LocalDateTime.now());
+    ExcecuteRecorderFileCommand recCommander = new ExcecuteRecorderFileCommand(env,Paths.get(""),0,LocalDateTime.now());
 
     recCommander.excecuteRecorderFile(strRecorderPath);
   }
@@ -42,7 +42,7 @@ public class DTFCommands {
    */
   public void excecuteRunXML(RuntimeEnv env, String strRunXMLPath) {
 
-    ExcecuteRecorderFileCommand recCommander = new ExcecuteRecorderFileCommand(env,0,Paths.get(""),0,LocalDateTime.now());
+    ExcecuteRecorderFileCommand recCommander = new ExcecuteRecorderFileCommand(env,Paths.get(""),0,LocalDateTime.now());
 
     File strXmlFile = new File(strRunXMLPath);
 

@@ -43,7 +43,7 @@ public class LoginAdapter
             strCommand += new DtfMotKeyCommand(DtfMotKeyCommand.EINGABE).getXml();// Eingabe Taste
 
         } else {
-           // strCommand += new DtfTextInputCommand(true).getXml(); // Löschen Taste
+          // strCommand += new DtfTextInputCommand(true).getXml(); // Löschen Taste
 System.out.println("richtig");
             strCommand += new DtfTextInputCommand(strPasswd).getXml(); // Passwd Eingeben
             strCommand += new DtfMotKeyCommand(DtfMotKeyCommand.EINGABE).getXml();// Eingabe Taste
