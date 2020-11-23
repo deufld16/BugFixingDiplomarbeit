@@ -23,6 +23,7 @@ import general.bl.GlobalAccess;
 import general.bl.GlobalParamter;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -287,12 +288,20 @@ public class AnalyzerManager {
                 
                 DurchlaufNew durchlauf = null;
                 try {
-                    durchlauf = DatabaseGlobalAccess.getInstance().getDurchlauf();
-                    if(durchlauf != null){
-                        durchlauf.setUebernahmeAnz(newReferences.size());
-                        DB_Access_Manager.getInstance().updateData();
+                    if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
+                        if(DatabaseGlobalAccess.getInstance().isWorkflow()) {
+                            durchlauf = DatabaseGlobalAccess.getInstance().getDurchlauf();
+                        } else {
+                            durchlauf = DatabaseGlobalAccess.getInstance().getNewDurchlauf();
+                            durchlauf.setDurchlaufDatum(LocalDate.now());
+                            durchlauf.setNutzer(DatabaseGlobalAccess.getInstance().getCurrentNutzer());
+                        }
+                        if(durchlauf != null) {
+                            durchlauf.setUebernahmeAnz(newReferences.size());
+                            DB_Access_Manager.getInstance().updateData();
+                        }
                     } else {
-                        throw new Exception("Database exception - Durchlauf is null");
+                        throw new Exception("Datenbank nicht erreichbar");
                     }
                 } catch(Exception ex) {
                     JOptionPane.showMessageDialog(null, 
