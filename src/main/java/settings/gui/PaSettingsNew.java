@@ -7,9 +7,7 @@ package settings.gui;
 
 import analyzer.beans.WhitelistEntry;
 import analyzer.enums.ResultFileType;
-//import com.ibm.db2.jcc.DB2Administrator;
 import dashboard.beans.Nutzer;
-import dashboard.beans.NutzerNew;
 import dashboard.bl.DatabaseGlobalAccess;
 import dashboard.database.DB_Access_Manager;
 import explorer.io.CommandsIO;
@@ -22,7 +20,6 @@ import java.awt.Component;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Map;
@@ -63,7 +60,7 @@ public class PaSettingsNew extends javax.swing.JPanel {
     private TableModelWhitelist tmw;
     private JFrame parent;
     private int characters = 60;
-    private DefaultComboBoxModel<NutzerNew> dcbm = new DefaultComboBoxModel<>();
+    private DefaultComboBoxModel<Nutzer> dcbm = new DefaultComboBoxModel<>();
 
     /**
      * Creates new form PaSettingsNew
@@ -1436,9 +1433,9 @@ public class PaSettingsNew extends javax.swing.JPanel {
     }//GEN-LAST:event_onChangeDiffAlignmentRestriction
 
     private void onChangeUser(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onChangeUser
-        NutzerNew nutzer = (NutzerNew) dcbm.getSelectedItem();
+        Nutzer nutzer = (Nutzer) dcbm.getSelectedItem();
         if (nutzer != null) {
-            for (NutzerNew user : DatabaseGlobalAccess.getInstance().getAllUsers()) {
+            for (Nutzer user : DatabaseGlobalAccess.getInstance().getAllUsers()) {
                 if (user == nutzer) {
                     DatabaseGlobalAccess.getInstance().setCurrentNutzer(nutzer);
                 }
@@ -1476,7 +1473,7 @@ public class PaSettingsNew extends javax.swing.JPanel {
 
     public void updateUserCB() {
         System.out.println("Update Content");
-        NutzerNew nutzer = (NutzerNew) dcbm.getSelectedItem();
+        Nutzer nutzer = (Nutzer) dcbm.getSelectedItem();
         System.out.println(nutzer);
         dcbm.removeAllElements();
 
@@ -1485,7 +1482,7 @@ public class PaSettingsNew extends javax.swing.JPanel {
 //            dcbm.addElement(user);
 //        }
         System.out.println(DatabaseGlobalAccess.getInstance().getAllUsers());
-        for (NutzerNew user : DatabaseGlobalAccess.getInstance().getAllUsers()) {
+        for (Nutzer user : DatabaseGlobalAccess.getInstance().getAllUsers()) {
             dcbm.addElement(user);
         }
         if (nutzer != null) {
@@ -1576,7 +1573,7 @@ public class PaSettingsNew extends javax.swing.JPanel {
     private javax.swing.JButton btRemoveTestsystem;
     private javax.swing.JButton btSaveGlobalExplorer;
     private javax.swing.JButton btSaveProjectExplorer;
-    private javax.swing.JComboBox<NutzerNew> cbNutzer;
+    private javax.swing.JComboBox<Nutzer> cbNutzer;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

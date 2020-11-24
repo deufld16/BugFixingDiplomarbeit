@@ -5,21 +5,15 @@
  */
 package explorer.gui;
 
-import dashboard.beans.ChangeNew;
 import dashboard.bl.DatabaseGlobalAccess;
-import dashboard.database.DB_Access;
 import dashboard.database.DB_Access_Manager;
-import dashboard.enums.ChangeType;
 import explorer.bl.ExplorerTreeModel;
 import explorer.io.ExplorerIO;
 import general.beans.io_objects.TestCaseRun;
 import general.bl.GlobalAccess;
-import general.bl.GlobalParamter;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.sql.SQLException;
-import java.time.LocalDateTime;
 import javax.swing.JOptionPane;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;

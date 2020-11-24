@@ -5,7 +5,7 @@
  */
 package general.beans.io_objects;
 
-import dashboard.beans.DurchlaufgegenstandNew;
+import dashboard.beans.Durchlaufgegenstand;
 import dashboard.beans.Projekt;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ import java.util.Objects;
 public class ProjectRun extends ExplorerLayer{
     private List<TestGroupRun> testgroups;
     
-    public ProjectRun(String description, Path path, DurchlaufgegenstandNew durchlaufgegenstand) {
+    public ProjectRun(String description, Path path, Durchlaufgegenstand durchlaufgegenstand) {
         super(description, path, durchlaufgegenstand);
         this.testgroups = new ArrayList<>();
     }

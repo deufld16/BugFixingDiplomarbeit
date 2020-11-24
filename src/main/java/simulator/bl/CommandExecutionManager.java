@@ -6,10 +6,8 @@
 package simulator.bl;
 
 import dashboard.beans.Durchlauf;
-import dashboard.beans.DurchlaufNew;
-import dashboard.beans.DurchlaufgegenstandNew;
+import dashboard.beans.Durchlaufgegenstand;
 import dashboard.bl.DatabaseGlobalAccess;
-import dashboard.database.DB_Access;
 import dashboard.database.DB_Access_Manager;
 import general.beans.io_objects.CommandRun;
 import general.beans.io_objects.ExplorerLayer;
@@ -23,7 +21,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -33,13 +30,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.CompletionService;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorCompletionService;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import simulator.beans.Kasse;
 import simulator.commands.impl.CheckRepInZAMTlogCommand;
 import simulator.commands.impl.ChkSyncCommandV2;
@@ -142,8 +136,8 @@ public class CommandExecutionManager implements Runnable {
         return runs;
     }
 
-    private List<DurchlaufgegenstandNew> getAllNewTargetItems() {
-        List<DurchlaufgegenstandNew> runs = new ArrayList<>();
+    private List<Durchlaufgegenstand> getAllNewTargetItems() {
+        List<Durchlaufgegenstand> runs = new ArrayList<>();
         for (ExplorerLayer target : targets) {
             if (target instanceof ProjectRun) {
                 runs.add(target.getDurchlauf_gegenstand());
@@ -534,7 +528,7 @@ public class CommandExecutionManager implements Runnable {
         //if (GlobalParamter.getInstance().getSelected_user() != null) {
         if (DatabaseGlobalAccess.getInstance().getCurrentNutzer() != null) {
             //Durchlauf durch = GlobalParamter.getInstance().getCurrentRun();
-            DurchlaufNew durch = DatabaseGlobalAccess.getInstance().getNewDurchlauf();
+            Durchlauf durch = DatabaseGlobalAccess.getInstance().getNewDurchlauf();
             int fail = 0;
             int erf = 0;
             for (int i = 0; i < cashpoints; i++) {

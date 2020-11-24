@@ -5,12 +5,12 @@
  */
 package dashboard.database;
 
-import dashboard.beans.ChangeNew;
+import dashboard.beans.Change;
 import dashboard.beans.ChangeType;
 import dashboard.beans.Command;
-import dashboard.beans.DurchlaufNew;
-import dashboard.beans.DurchlaufgegenstandNew;
-import dashboard.beans.NutzerNew;
+import dashboard.beans.Durchlauf;
+import dashboard.beans.Durchlaufgegenstand;
+import dashboard.beans.Nutzer;
 import dashboard.beans.Projekt;
 import dashboard.beans.TestCase;
 import dashboard.beans.Testgruppe;
@@ -77,7 +77,6 @@ public class DB_Access_Manager {
                 for (TestGroupRun testgroup : p.getTestgroups()) {
                     Testgruppe tg = new Testgruppe(testgroup.getDescription(), LocalDate.now(), 0);
                     if (!containsItem(existingProject, tg)) {
-                        System.out.println("ich bin nicht drin 1");
                         tg.setProjekt(existingProject);
                         testGruppenToImport.add(tg);
                     } else {
@@ -87,7 +86,6 @@ public class DB_Access_Manager {
                     for (TestCaseRun testC : testgroup.getTestCases()) {
                         TestCase tc = new TestCase(testC.getDescription(), LocalDate.now(), 0);
                         if (!containsItem(tg, tc)) {
-                            System.out.println("ich bin nicht drin 2");
                             tc.setTestGruppe(tg);
                             TestCasesToImport.add(tc);
                         } else {
@@ -95,10 +93,8 @@ public class DB_Access_Manager {
                         }
                         testC.setDurchlauf_gegenstand(tc);
                         for (CommandRun command : testC.getCommands()) {
-                            System.out.println(command + "Flojo");
                             Command com = new Command(command.getDescription(), LocalDate.now(), 0);
                             if (!containsItem(tc, com)) {
-                                System.out.println("ich bin nicht drin 3");
                                 com.setTestCase(tc);
                                 CommandsToImport.add(com);
                             } else {
@@ -115,10 +111,7 @@ public class DB_Access_Manager {
             }
             p.setDurchlauf_gegenstand(existingProject);
         }
-        System.out.println(projektToImport.size());
-        System.out.println(testGruppenToImport.size());
-        System.out.println(TestCasesToImport.size());
-        System.out.println(CommandsToImport.size());
+
         for (Projekt projekt : projektToImport) {
             DatabaseGlobalAccess.getInstance().getEm().persist(projekt);
         }
@@ -201,7 +194,7 @@ public class DB_Access_Manager {
         }
     }
 
-    private boolean containsItem(DurchlaufgegenstandNew parent, DurchlaufgegenstandNew child) {
+    private boolean containsItem(Durchlaufgegenstand parent, Durchlaufgegenstand child) {
         if (parent instanceof Projekt) {
             if (((Projekt) parent).getTestgruppen().contains((Testgruppe) child)) {
                 return true;
@@ -219,7 +212,6 @@ public class DB_Access_Manager {
     }
 
     private Projekt importProjekt(ProjectRun pr) {
-        System.out.println("i am here");
         Projekt projekt = new Projekt(pr.getDescription(), LocalDate.now(), 0);
         pr.setDurchlauf_gegenstand(projekt);
         for (TestGroupRun testgroup : pr.getTestgroups()) {
@@ -254,62 +246,53 @@ public class DB_Access_Manager {
         DatabaseGlobalAccess.getInstance().getEmf().close();
     }
 
-//    public void forcefullyImportProject() {
-//        for (ProjectRun pr : GlobalParamter.getInstance().getWorkingProjects()) {
-//            Projekt p = importProjekt(pr);
-//            Projekt pr_exists = projectExists(pr);
-//            if (pr_exists != null) {
-//                pr_exists = p;
-//            }
-//        }
-//    }
     public void updateData() {
         DatabaseGlobalAccess.getInstance().getEm().getTransaction().begin();
         DatabaseGlobalAccess.getInstance().getEm().getTransaction().commit();
     }
 
     public void addUser(String username) {
-        NutzerNew nutzer = new NutzerNew(username);
+        Nutzer nutzer = new Nutzer(username);
         DatabaseGlobalAccess.getInstance().getEm().persist(nutzer);
         updateData();
         DatabaseGlobalAccess.getInstance().getAllUsers().add(nutzer);
         DatabaseGlobalAccess.getInstance().setCurrentNutzer(nutzer);
     }
 
-    public List<ChangeNew> selectChanges() {
-        TypedQuery<ChangeNew> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("ChangeNew.selectAll", ChangeNew.class);
+    public List<Change> selectChanges() {
+        TypedQuery<Change> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("ChangeNew.selectAll", Change.class);
         return changeTypeQuery.getResultList();
     }
 
-    public List<ChangeNew> selectChanges(LocalDateTime from, LocalDateTime until) {
-        TypedQuery<ChangeNew> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("ChangeNew.selectAllInterval", ChangeNew.class);
+    public List<Change> selectChanges(LocalDateTime from, LocalDateTime until) {
+        TypedQuery<Change> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("ChangeNew.selectAllInterval", Change.class);
         changeTypeQuery.setParameter("vonDate", from);
         changeTypeQuery.setParameter("bisDate", until);
         return changeTypeQuery.getResultList();
     }
 
-    public List<ChangeNew> selectChanges(LocalDateTime from, LocalDateTime until, NutzerNew user) {
-        TypedQuery<ChangeNew> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("ChangeNew.selectAllIntervalUser", ChangeNew.class);
+    public List<Change> selectChanges(LocalDateTime from, LocalDateTime until, Nutzer user) {
+        TypedQuery<Change> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("ChangeNew.selectAllIntervalUser", Change.class);
         changeTypeQuery.setParameter("vonDate", from);
         changeTypeQuery.setParameter("bisDate", until);
         changeTypeQuery.setParameter("userId", user.getNutzerid());
         return changeTypeQuery.getResultList();
     }
 
-    public List<DurchlaufNew> selectRun() {
-        TypedQuery<DurchlaufNew> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("DurchlaufNew.selectAll", DurchlaufNew.class);
+    public List<Durchlauf> selectRun() {
+        TypedQuery<Durchlauf> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("DurchlaufNew.selectAll", Durchlauf.class);
         return changeTypeQuery.getResultList();
     }
 
-    public List<DurchlaufNew> selectRun(LocalDate from, LocalDate until) {
-        TypedQuery<DurchlaufNew> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("DurchlaufNew.selectAllInterval", DurchlaufNew.class);
+    public List<Durchlauf> selectRun(LocalDate from, LocalDate until) {
+        TypedQuery<Durchlauf> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("DurchlaufNew.selectAllInterval", Durchlauf.class);
         changeTypeQuery.setParameter("vonDate", from);
         changeTypeQuery.setParameter("bisDate", until);
         return changeTypeQuery.getResultList();
     }
 
-    public List<DurchlaufNew> selectRun(LocalDate from, LocalDate until, NutzerNew user) {
-        TypedQuery<DurchlaufNew> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("DurchlaufNew.selectAllIntervalUser", DurchlaufNew.class);
+    public List<Durchlauf> selectRun(LocalDate from, LocalDate until, Nutzer user) {
+        TypedQuery<Durchlauf> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("DurchlaufNew.selectAllIntervalUser", Durchlauf.class);
         changeTypeQuery.setParameter("vonDate", from);
         changeTypeQuery.setParameter("bisDate", until);
         changeTypeQuery.setParameter("userId", user.getNutzerid());
@@ -317,12 +300,9 @@ public class DB_Access_Manager {
     }
 
     public void addChangeEntry(ExplorerLayer entity, String bezeichnung) {
-        System.out.println("ich werde ausgeführt");
-        ChangeNew change = new ChangeNew(LocalDateTime.now());
-        System.out.println(bezeichnung);
+        Change change = new Change(LocalDateTime.now());
         for (ChangeType changeType : DatabaseGlobalAccess.getInstance().getAllChangeTypes()) {
             if (changeType.getBezeichnung().equalsIgnoreCase(bezeichnung)) {
-                System.out.println(changeType);
                 change.setChangeType(changeType);
             }
         }
@@ -335,28 +315,50 @@ public class DB_Access_Manager {
         }
     }
 
-    public void deleteNode(DurchlaufgegenstandNew entity) {
+    public void addChangeEntry(Durchlaufgegenstand entity, String bezeichnung) {
+        Change change = new Change(LocalDateTime.now());
+        for (ChangeType changeType : DatabaseGlobalAccess.getInstance().getAllChangeTypes()) {
+            if (changeType.getBezeichnung().equalsIgnoreCase(bezeichnung)) {
+                change.setChangeType(changeType);
+            }
+        }
+        change.setGegenstand(entity);
+        change.setNutzer(DatabaseGlobalAccess.getInstance().getCurrentNutzer());
+        try {
+            updateData();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public void deleteNode(Durchlaufgegenstand entity) {
         entity.setDeleted(1);
         if (entity instanceof Projekt) {
             for (Testgruppe tg : ((Projekt) entity).getTestgruppen()) {
                 tg.setDeleted(1);
+                addChangeEntry(tg, "DELETED");
                 for (TestCase testCase : tg.getTestCases()) {
                     testCase.setDeleted(1);
+                    addChangeEntry(testCase, "DELETED");
                     for (Command command : testCase.getCommands()) {
                         command.setDeleted(1);
+                        addChangeEntry(command, "DELETED");
                     }
                 }
             }
         } else if (entity instanceof Testgruppe) {
             for (TestCase testCase : ((Testgruppe) entity).getTestCases()) {
                 testCase.setDeleted(1);
+                addChangeEntry(testCase, "DELETED");
                 for (Command command : testCase.getCommands()) {
                     command.setDeleted(1);
+                    addChangeEntry(command, "DELETED");
                 }
             }
         } else if (entity instanceof TestCase) {
             for (Command command : ((TestCase) entity).getCommands()) {
                 command.setDeleted(1);
+                addChangeEntry(command, "DELETED");
             }
         }
     }

@@ -13,16 +13,18 @@ import javax.persistence.Entity;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /**
  *
  * @author flori
  */
 @Entity
+@Table(name = "projekt")
 @NamedQueries({
     @NamedQuery(name = "Projekt.selectAll", query = "SELECT p FROM Projekt p"),
 })
-public class Projekt extends DurchlaufgegenstandNew{
+public class Projekt extends Durchlaufgegenstand{
 
     @OneToMany(mappedBy = "projekt", cascade = CascadeType.ALL)
     private List<Testgruppe> testgruppen = new LinkedList<>();

@@ -15,15 +15,17 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /**
  *
  * @author flori
  */
 @Entity
+@Table(name = "testcase")
 @NamedQueries({
     @NamedQuery(name = "TestCase.selectAll", query = "SELECT tc FROM TestCase tc"),})
-public class TestCase extends DurchlaufgegenstandNew {
+public class TestCase extends Durchlaufgegenstand {
 
     @OneToMany(mappedBy = "testCase", cascade = CascadeType.ALL)
     private List<Command> commands = new LinkedList<>();

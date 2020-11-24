@@ -15,17 +15,19 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /**
  *
  * @author flori
  */
 @Entity
+@Table(name = "testgruppe")
 @NamedQueries({
     @NamedQuery(name = "Testgruppe.selectAll", query = "SELECT tg FROM Testgruppe tg"),
     @NamedQuery(name = "Testgruppe.doesNotContain", query = "SELECT tg FROM Testgruppe tg JOIN Projekt p WHERE tg IN(:testgruppen) AND p = :proj"),
 })
-public class Testgruppe extends DurchlaufgegenstandNew {
+public class Testgruppe extends Durchlaufgegenstand {
 
     @OneToMany(mappedBy = "testGruppe", cascade = CascadeType.ALL)
     private List<TestCase> testCases = new LinkedList<>();

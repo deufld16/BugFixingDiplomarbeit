@@ -5,7 +5,7 @@
  */
 package general.beans.io_objects;
 
-import dashboard.beans.DurchlaufgegenstandNew;
+import dashboard.beans.Durchlaufgegenstand;
 import java.nio.file.Path;
 import java.util.LinkedList;
 import java.util.List;
@@ -25,7 +25,7 @@ public class TestCaseRun extends ExplorerLayer {
         super(description, path);
     }
 
-    public TestCaseRun(String description, Path path, DurchlaufgegenstandNew durchlaufgegenstand) {
+    public TestCaseRun(String description, Path path, Durchlaufgegenstand durchlaufgegenstand) {
         super(description, path, durchlaufgegenstand);
     }
 

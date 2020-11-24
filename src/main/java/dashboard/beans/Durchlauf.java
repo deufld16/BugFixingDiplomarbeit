@@ -5,40 +5,71 @@
  */
 package dashboard.beans;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 /**
- * Class to store relevant statistics-infomation during an execution process.
- * It represents the entity Durchlauf at the database
- * 
- * @author Maximilian Strohmaier
+ *
+ * @author flori
  */
-public class Durchlauf {
+@Entity
+@Table(name = "durchlauf")
+@NamedQueries({
+    @NamedQuery(name = "DurchlaufNew.selectAll", query = "SELECT d FROM Durchlauf d"),
+    @NamedQuery(name = "DurchlaufNew.selectAllInterval", query = "SELECT d FROM Durchlauf d WHERE d.durchlaufDatum BETWEEN :vonDate AND :bisDate"),
+    @NamedQuery(name = "DurchlaufNew.selectAllIntervalUser", query = "SELECT d FROM Durchlauf d WHERE d.durchlaufDatum BETWEEN :vonDate AND :bisDate AND d.nutzer.nutzerid = :userId"),
+})
+public class Durchlauf implements Serializable{
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int durchlaufId;
-    private LocalDateTime durchlaufDatum;
+    @Column(nullable = false)
+    private LocalDate durchlaufDatum;
+    @Column(nullable = false)
     private int anzahl;
+    @Column(nullable = false)
     private int erfolgreich;
+    @Column(nullable = false)
     private int fehlgeschlagen;
+    @Column(nullable = false)
     private int uebernahmeAnz;
-    private int nutzerId;
+    
+    @ManyToMany
+    @JoinColumn(name = "gegenstand", nullable = false)
+    private List<Durchlaufgegenstand> gegenstand = new LinkedList<>();
+    
+    @ManyToOne
+    @JoinColumn(name = "nutzer", nullable = false)
+    private Nutzer nutzer;
 
     public Durchlauf() {
-        durchlaufId = 1;
     }
 
-    public Durchlauf(int durchlaufId, LocalDateTime durchlaufDatum, int anzahl, int erfolgreich, int fehlgeschlagen, int uebernahmeAnz, int nutzerId) {
-        this.durchlaufId = durchlaufId;
+    public Durchlauf(LocalDate durchlaufDatum, int anzahl, int erfolgreich, int fehlgeschlagen, int uebernahmeAnz) {
         this.durchlaufDatum = durchlaufDatum;
         this.anzahl = anzahl;
         this.erfolgreich = erfolgreich;
         this.fehlgeschlagen = fehlgeschlagen;
         this.uebernahmeAnz = uebernahmeAnz;
-        this.nutzerId = nutzerId;;
     }
-
-    
-    
+  
     public int getDurchlaufId() {
         return durchlaufId;
     }
@@ -47,11 +78,11 @@ public class Durchlauf {
         this.durchlaufId = durchlaufId;
     }
 
-    public LocalDateTime getDurchlaufDatum() {
+    public LocalDate getDurchlaufDatum() {
         return durchlaufDatum;
     }
 
-    public void setDurchlaufDatum(LocalDateTime durchlaufDatum) {
+    public void setDurchlaufDatum(LocalDate durchlaufDatum) {
         this.durchlaufDatum = durchlaufDatum;
     }
 
@@ -87,18 +118,87 @@ public class Durchlauf {
         this.uebernahmeAnz = uebernahmeAnz;
     }
 
-    public int getNutzerId() {
-        return nutzerId;
+    public List<Durchlaufgegenstand> getGegenstand() {
+        return gegenstand;
     }
 
-    public void setNutzerId(int nutzerId) {
-        this.nutzerId = nutzerId;
+    public void setGegenstand(List<Durchlaufgegenstand> allGegenstand) {
+        List<Durchlaufgegenstand> dGegenstand = new LinkedList<>();
+        
+        for (Durchlaufgegenstand gegenstand : allGegenstand) {
+            if(dGegenstand.contains(gegenstand)){
+                dGegenstand.add(gegenstand);
+            }
+        }
+        
+        this.gegenstand = dGegenstand;
+        for (Durchlaufgegenstand durchlaufgegenstandNew : gegenstand) {
+            //System.out.println(durchlaufgegenstandNew.getGegenstandid() + durchlaufgegenstandNew.getBezeichnung());
+           durchlaufgegenstandNew.getAllDurchlauf().add(this);
+        }
+      //  this.gegenstand.getAllDurchlauf().add(this);
+    }
+
+    public Nutzer getNutzer() {
+        return nutzer;
+    }
+
+    public void setNutzer(Nutzer nutzer) {
+        this.nutzer = nutzer;
+        this.nutzer.getAllDurchlauf().add(this);
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 37 * hash + this.durchlaufId;
+        hash = 37 * hash + Objects.hashCode(this.durchlaufDatum);
+        hash = 37 * hash + this.anzahl;
+        hash = 37 * hash + this.erfolgreich;
+        hash = 37 * hash + this.fehlgeschlagen;
+        hash = 37 * hash + this.uebernahmeAnz;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Durchlauf other = (Durchlauf) obj;
+        if (this.durchlaufId != other.durchlaufId) {
+            return false;
+        }
+        if (this.anzahl != other.anzahl) {
+            return false;
+        }
+        if (this.erfolgreich != other.erfolgreich) {
+            return false;
+        }
+        if (this.fehlgeschlagen != other.fehlgeschlagen) {
+            return false;
+        }
+        if (this.uebernahmeAnz != other.uebernahmeAnz) {
+            return false;
+        }
+        if (!Objects.equals(this.durchlaufDatum, other.durchlaufDatum)) {
+            return false;
+        }
+        return true;
     }
 
     @Override
     public String toString() {
-        return durchlaufId + "";
+        return "DurchlaufNew{" + "durchlaufId=" + durchlaufId + ", durchlaufDatum=" + durchlaufDatum + ", gegenstand=" + gegenstand + ", nutzer=" + nutzer + '}';
     }
+
+    
     
     
 }

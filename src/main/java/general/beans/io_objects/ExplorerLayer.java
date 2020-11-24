@@ -5,7 +5,7 @@
  */
 package general.beans.io_objects;
 
-import dashboard.beans.DurchlaufgegenstandNew;
+import dashboard.beans.Durchlaufgegenstand;
 import java.nio.file.Path;
 import java.util.Objects;
 
@@ -19,9 +19,9 @@ public class ExplorerLayer {
     protected String description;
     protected Path path;
     protected boolean isExpanded = false;
-    protected DurchlaufgegenstandNew durchlauf_gegenstand;
+    protected Durchlaufgegenstand durchlauf_gegenstand;
 
-    public ExplorerLayer(String description, Path path, DurchlaufgegenstandNew durchlauf_gegenstand) {
+    public ExplorerLayer(String description, Path path, Durchlaufgegenstand durchlauf_gegenstand) {
         this.description = description;
         this.path = path;
         this.durchlauf_gegenstand = durchlauf_gegenstand;
@@ -63,11 +63,11 @@ public class ExplorerLayer {
         return hash;
     }
 
-    public DurchlaufgegenstandNew getDurchlauf_gegenstand() {
+    public Durchlaufgegenstand getDurchlauf_gegenstand() {
         return durchlauf_gegenstand;
     }
 
-    public void setDurchlauf_gegenstand(DurchlaufgegenstandNew durchlauf_gegenstand) {
+    public void setDurchlauf_gegenstand(Durchlaufgegenstand durchlauf_gegenstand) {
         this.durchlauf_gegenstand = durchlauf_gegenstand;
     }
 

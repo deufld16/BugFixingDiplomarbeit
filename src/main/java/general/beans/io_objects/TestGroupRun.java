@@ -5,7 +5,7 @@
  */
 package general.beans.io_objects;
 
-import dashboard.beans.DurchlaufgegenstandNew;
+import dashboard.beans.Durchlaufgegenstand;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.LinkedList;
@@ -29,7 +29,7 @@ public class TestGroupRun extends ExplorerLayer {
         super(description, path);
     }
 
-    public TestGroupRun(String description, Path path, DurchlaufgegenstandNew durchlaufgegenstand) {
+    public TestGroupRun(String description, Path path, Durchlaufgegenstand durchlaufgegenstand) {
         super(description, path, durchlaufgegenstand);
     }
 
@@ -41,7 +41,7 @@ public class TestGroupRun extends ExplorerLayer {
         this.testCases = testCases;
     }
     
-        public TestGroupRun(int empId, int tllId, int password, List<TestCaseRun> testCases, String description, Path path, DurchlaufgegenstandNew durchlaufgegenstand) {
+        public TestGroupRun(int empId, int tllId, int password, List<TestCaseRun> testCases, String description, Path path, Durchlaufgegenstand durchlaufgegenstand) {
         super(description, path, durchlaufgegenstand);
         this.empId = empId;
         this.tllId = tllId;

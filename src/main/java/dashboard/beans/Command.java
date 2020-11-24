@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 import org.eclipse.persistence.annotations.CascadeOnDelete;
 
 /**
@@ -18,10 +19,11 @@ import org.eclipse.persistence.annotations.CascadeOnDelete;
  * @author flori
  */
 @Entity
+@Table(name = "command")
 @NamedQueries({
     @NamedQuery(name = "Command.selectAll", query = "SELECT c FROM Command c"),
 })
-public class Command extends DurchlaufgegenstandNew {
+public class Command extends Durchlaufgegenstand {
 
     @ManyToOne
     @JoinColumn(name = "testCase", nullable = false)

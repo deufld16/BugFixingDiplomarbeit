@@ -1,8 +1,8 @@
 package dashboard.bl;
 
 import dashboard.beans.ChangeType;
-import dashboard.beans.DurchlaufNew;
-import dashboard.beans.NutzerNew;
+import dashboard.beans.Durchlauf;
+import dashboard.beans.Nutzer;
 import dashboard.beans.Projekt;
 import dashboard.beans.TestCase;
 import dashboard.beans.Testgruppe;
@@ -25,12 +25,12 @@ import recorder.beans.Command;
 public class DatabaseGlobalAccess {
 
     private static DatabaseGlobalAccess instance = null;
-    private NutzerNew currentNutzer;
+    private Nutzer currentNutzer;
     private List<ChangeType> allChangeTypes = new LinkedList<>();
     private List<Projekt> allProjects = new LinkedList<>();
-    private List<NutzerNew> allUsers = new LinkedList<>();
+    private List<Nutzer> allUsers = new LinkedList<>();
     private boolean dbReachable = false;
-    private List<DurchlaufNew> durchlauf = new LinkedList<>();
+    private List<Durchlauf> durchlauf = new LinkedList<>();
 //    private List<Testgruppe> allTestGruppen = new LinkedList<>();
 //    private List<TestCase> allTestCases = new LinkedList<>();
 //    private List<Command> allCommands = new LinkedList<>();
@@ -49,7 +49,7 @@ public class DatabaseGlobalAccess {
         em.persist(new ChangeType("MOVED"));
         em.persist(new ChangeType("STATECHANGED"));
         em.persist(new ChangeType("CHANGED"));
-        em.persist(new NutzerNew("Default User"));
+        em.persist(new Nutzer("Default User"));
         em.getTransaction().begin();
         em.getTransaction().commit();
 
@@ -57,10 +57,10 @@ public class DatabaseGlobalAccess {
         allChangeTypes = new LinkedList<>(changeTypeQuery.getResultList());
         TypedQuery<Projekt> projectQuerry = em.createNamedQuery("Projekt.selectAll", Projekt.class);
         allProjects = new LinkedList<>(projectQuerry.getResultList());
-        TypedQuery<NutzerNew> userQuerry = em.createNamedQuery("NutzerNew.selectAll", NutzerNew.class);
+        TypedQuery<Nutzer> userQuerry = em.createNamedQuery("NutzerNew.selectAll", Nutzer.class);
         allUsers = new LinkedList<>(userQuerry.getResultList());
         if (currentNutzer == null) {
-            for (NutzerNew user : allUsers) {
+            for (Nutzer user : allUsers) {
                 if (user.getUsername().equalsIgnoreCase("Default User")) {
                     currentNutzer = user;
                 }
@@ -89,17 +89,17 @@ public class DatabaseGlobalAccess {
         return instance;
     }
 
-    public NutzerNew getCurrentNutzer() {
+    public Nutzer getCurrentNutzer() {
         return currentNutzer;
     }
     
-    public DurchlaufNew getNewDurchlauf(){
-        durchlauf.add(new DurchlaufNew());
+    public Durchlauf getNewDurchlauf(){
+        durchlauf.add(new Durchlauf());
         em.persist(durchlauf.get(durchlauf.size()-1));
         return durchlauf.get(durchlauf.size()-1);
     }
 
-    public void setCurrentNutzer(NutzerNew currentNutzer) {
+    public void setCurrentNutzer(Nutzer currentNutzer) {
         this.currentNutzer = currentNutzer;
     }
 
@@ -135,7 +135,7 @@ public class DatabaseGlobalAccess {
         this.allProjects = allProjects;
     }
 
-    public DurchlaufNew getDurchlauf() {
+    public Durchlauf getDurchlauf() {
          return durchlauf.get(durchlauf.size()-1);
     }
 
@@ -171,11 +171,11 @@ public class DatabaseGlobalAccess {
 //    public void setAllCommands(List<Command> allCommands) {
 //        this.allCommands = allCommands;
 //    }
-    public List<NutzerNew> getAllUsers() {
+    public List<Nutzer> getAllUsers() {
         return allUsers;
     }
 
-    public void setAllUsers(List<NutzerNew> allUsers) {
+    public void setAllUsers(List<Nutzer> allUsers) {
         this.allUsers = allUsers;
     }
 

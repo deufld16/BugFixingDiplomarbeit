@@ -5,7 +5,7 @@
  */
 package explorer.bl;
 
-import dashboard.beans.ChangeNew;
+import dashboard.beans.Change;
 import dashboard.bl.DatabaseGlobalAccess;
 import dashboard.database.DB_Access_Manager;
 import dashboard.enums.ChangeType;

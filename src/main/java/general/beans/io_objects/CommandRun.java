@@ -5,7 +5,7 @@
  */
 package general.beans.io_objects;
 
-import dashboard.beans.DurchlaufgegenstandNew;
+import dashboard.beans.Durchlaufgegenstand;
 import java.nio.file.Path;
 import java.util.Objects;
 import org.w3c.dom.NodeList;
@@ -29,7 +29,7 @@ public class CommandRun extends ExplorerLayer {
         System.out.println("Ich bin neu 4");
     }
 
-    public CommandRun(String className, NodeList nodeList, String description, Path path, DurchlaufgegenstandNew durchlaufgegenstand) {
+    public CommandRun(String className, NodeList nodeList, String description, Path path, Durchlaufgegenstand durchlaufgegenstand) {
         super(description, path, durchlaufgegenstand);
         this.className = className;
         this.nodeList = nodeList;

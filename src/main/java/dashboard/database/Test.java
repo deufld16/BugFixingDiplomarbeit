@@ -5,7 +5,7 @@
  */
 package dashboard.database;
 
-import dashboard.beans.DurchlaufgegenstandNew;
+import dashboard.beans.Durchlaufgegenstand;
 import dashboard.bl.DatabaseGlobalAccess;
 import general.beans.io_objects.CommandRun;
 import general.beans.io_objects.ProjectRun;
@@ -87,7 +87,7 @@ public class Test {
             if (i % 10000 == 0) {
                 System.out.println(i);
             }
-            DatabaseGlobalAccess.getInstance().getEm().persist(new DurchlaufgegenstandNew("Test_" + i, LocalDate.now(), 0));
+            DatabaseGlobalAccess.getInstance().getEm().persist(new Durchlaufgegenstand("Test_" + i, LocalDate.now(), 0));
         }
         DatabaseGlobalAccess.getInstance().getEm().getTransaction().begin();
         DatabaseGlobalAccess.getInstance().getEm().getTransaction().commit();

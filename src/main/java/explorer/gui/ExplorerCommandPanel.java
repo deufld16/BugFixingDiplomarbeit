@@ -5,35 +5,20 @@
  */
 package explorer.gui;
 
-import dashboard.beans.ChangeNew;
 import dashboard.bl.DatabaseGlobalAccess;
-import dashboard.database.DB_Access;
 import dashboard.database.DB_Access_Manager;
-import dashboard.enums.ChangeType;
-import dashboard.enums.ChangeTypeNew;
 import explorer.bl.ExplorerTreeModel;
 import explorer.io.ExplorerIO;
 import general.beans.io_objects.CommandRun;
 import general.bl.GlobalAccess;
 import general.bl.GlobalParamter;
 import general.io.Mapper;
-import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.sql.SQLException;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JComponent;
-import javax.swing.JLabel;
 import javax.xml.parsers.ParserConfigurationException;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -42,7 +27,6 @@ import javax.swing.JTextField;
 import javax.xml.transform.TransformerException;
 import javax.xml.xpath.XPathExpressionException;
 import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 /**

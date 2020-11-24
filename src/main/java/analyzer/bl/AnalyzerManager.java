@@ -13,16 +13,13 @@ import analyzer.beans.TestGroupErg;
 import analyzer.enums.ResultFileType;
 import analyzer.gui.AnalyzerPanel;
 import analyzer.io.ResultsIO;
-import dashboard.database.DB_Access;
 import dashboard.beans.Durchlauf;
-import dashboard.beans.DurchlaufNew;
 import dashboard.bl.DatabaseGlobalAccess;
 import dashboard.database.DB_Access_Manager;
 import dashboard.gui.LoadingDLG;
 import general.bl.GlobalAccess;
 import general.bl.GlobalParamter;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
@@ -286,7 +283,7 @@ public class AnalyzerManager {
                     }
                 }
                 
-                DurchlaufNew durchlauf = null;
+                Durchlauf durchlauf = null;
                 try {
                     if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
                         if(DatabaseGlobalAccess.getInstance().isWorkflow()) {

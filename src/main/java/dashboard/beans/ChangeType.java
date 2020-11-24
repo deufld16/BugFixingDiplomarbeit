@@ -19,12 +19,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /**
  *
  * @author flori
  */
 @Entity
+@Table(name = "changetype")
 @NamedQueries({
     @NamedQuery(name = "ChangeType.selectAll", query = "SELECT ct FROM ChangeType ct"),
 })
@@ -36,7 +38,7 @@ public class ChangeType implements Serializable{
     private String bezeichnung;
     
     @OneToMany(mappedBy = "changeType", cascade = CascadeType.ALL)
-    private List<ChangeNew> changes = new LinkedList<>();
+    private List<Change> changes = new LinkedList<>();
 
     public ChangeType() {
     }
@@ -61,11 +63,11 @@ public class ChangeType implements Serializable{
         this.bezeichnung = bezeichnung;
     }
 
-    public List<ChangeNew> getChanges() {
+    public List<Change> getChanges() {
         return changes;
     }
 
-    public void setChanges(List<ChangeNew> changes) {
+    public void setChanges(List<Change> changes) {
         this.changes = changes;
     }
 

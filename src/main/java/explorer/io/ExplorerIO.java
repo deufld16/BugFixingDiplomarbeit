@@ -6,7 +6,6 @@
 package explorer.io;
 
 import dashboard.bl.DatabaseGlobalAccess;
-import dashboard.database.DB_Access;
 import dashboard.database.DB_Access_Manager;
 import general.beans.io_objects.ExplorerLayer;
 import general.beans.io_objects.ProjectRun;
@@ -23,14 +22,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Pattern;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;

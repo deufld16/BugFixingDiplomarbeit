@@ -5,16 +5,12 @@
  */
 package explorer.gui;
 
-import dashboard.beans.ChangeNew;
 import dashboard.beans.Command;
-import dashboard.beans.DurchlaufgegenstandNew;
 import dashboard.beans.Projekt;
 import dashboard.beans.TestCase;
 import dashboard.beans.Testgruppe;
 import dashboard.bl.DatabaseGlobalAccess;
-import dashboard.database.DB_Access;
 import dashboard.database.DB_Access_Manager;
-import dashboard.enums.ChangeType;
 import explorer.bl.ExplorerKeyListener;
 import explorer.bl.ExplorerPopupMenuListener;
 import explorer.bl.ExplorerTransferHandler;

@@ -6,19 +6,11 @@
 package dashboard.gui;
 
 import dashboard.beans.Change;
-import dashboard.beans.ChangeNew;
-import dashboard.beans.Nutzer;
-import dashboard.database.DB_Access;
 import dashboard.beans.Durchlauf;
-import dashboard.beans.DurchlaufNew;
-import dashboard.beans.NutzerNew;
+import dashboard.beans.Nutzer;
 import dashboard.bl.DatabaseGlobalAccess;
 import dashboard.database.DB_Access_Manager;
-import general.bl.GlobalParamter;
 import java.awt.Color;
-import java.sql.SQLException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -26,27 +18,17 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAdjusters;
-import java.time.temporal.WeekFields;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
-import java.util.NoSuchElementException;
 import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFormattedTextField;
-import javax.swing.JOptionPane;
 import org.knowm.xchart.CategoryChart;
 import org.knowm.xchart.CategoryChartBuilder;
-import org.knowm.xchart.PieChartBuilder;
 import org.knowm.xchart.XChartPanel;
 import org.knowm.xchart.style.Styler;
-import simulator.bl.ExecutionManager;
 
 /**
  *
@@ -275,16 +257,16 @@ public class DashboardPanel extends javax.swing.JPanel {
                     int tmpSuccess = 0;
                     int tmpRefs = 0;
                     try {
-                        if (((NutzerNew) cbUser.getSelectedItem()).getUsername().equalsIgnoreCase("Übersicht")) {
+                        if (((Nutzer) cbUser.getSelectedItem()).getUsername().equalsIgnoreCase("Übersicht")) {
                             //for (Durchlauf durch : DB_Access.getInstance().selectRun(dates.get(i), dates.get(i + 1))) {
-                            for (DurchlaufNew durch : DB_Access_Manager.getInstance().selectRun(dates.get(i), dates.get(i + 1))) {
+                            for (Durchlauf durch : DB_Access_Manager.getInstance().selectRun(dates.get(i), dates.get(i + 1))) {
                                 tmpFail += durch.getFehlgeschlagen();
                                 tmpSuccess += durch.getErfolgreich();
                                 tmpRefs += durch.getUebernahmeAnz();
                             }
                         } else {
                             //for (Durchlauf durch : DB_Access.getInstance().selectRun(dates.get(i), dates.get(i + 1), (Nutzer) cbUser.getSelectedItem())) {
-                            for (DurchlaufNew durch : DB_Access_Manager.getInstance().selectRun(dates.get(i), dates.get(i + 1), (NutzerNew) cbUser.getSelectedItem())) {
+                            for (Durchlauf durch : DB_Access_Manager.getInstance().selectRun(dates.get(i), dates.get(i + 1), (Nutzer) cbUser.getSelectedItem())) {
                                 tmpFail += durch.getFehlgeschlagen();
                                 tmpSuccess += durch.getErfolgreich();
                                 tmpRefs += durch.getUebernahmeAnz();
@@ -333,10 +315,10 @@ public class DashboardPanel extends javax.swing.JPanel {
                     int tmpChange = 0;
                     try {
                         //System.out.println("äalsdkfaksäödlka");
-                        if (((NutzerNew) cbUser.getSelectedItem()).getUsername().equalsIgnoreCase("Übersicht")) {
+                        if (((Nutzer) cbUser.getSelectedItem()).getUsername().equalsIgnoreCase("Übersicht")) {
                             //System.out.println("a");
                             //for (Change change : DB_Access.getInstance().selectChanges(dates.get(i), dates.get(i + 1))) {
-                            for (ChangeNew change : DB_Access_Manager.getInstance().selectChanges(dates.get(i), dates.get(i + 1))) {
+                            for (Change change : DB_Access_Manager.getInstance().selectChanges(dates.get(i), dates.get(i + 1))) {
 //                                System.out.println("asdf");
 //                                System.out.println(change.getType());
                                 switch (change.getChangeType().getBezeichnung()) {
@@ -360,7 +342,7 @@ public class DashboardPanel extends javax.swing.JPanel {
                             }
                         } else {
 //                            System.out.println("asf");
-                            for (ChangeNew change : DB_Access_Manager.getInstance().selectChanges(dates.get(i), dates.get(i + 1), (NutzerNew) cbUser.getSelectedItem())) {
+                            for (Change change : DB_Access_Manager.getInstance().selectChanges(dates.get(i), dates.get(i + 1), (Nutzer) cbUser.getSelectedItem())) {
 
 //                                System.out.println(change.getType());
                                 switch (change.getChangeType().getBezeichnung()) {
@@ -415,7 +397,7 @@ public class DashboardPanel extends javax.swing.JPanel {
     public void refillUsers() {
         dcbmUser = new DefaultComboBoxModel();
         cbUser.setModel(dcbmUser);
-        dcbmUser.addElement(new NutzerNew("Übersicht"));
+        dcbmUser.addElement(new Nutzer("Übersicht"));
 
 //        try {
 //            if (GlobalParamter.getInstance().isStatistic_db_reachable()) {
@@ -425,7 +407,7 @@ public class DashboardPanel extends javax.swing.JPanel {
 //            } else {
 //            }
         if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
-            for (NutzerNew user : DatabaseGlobalAccess.getInstance().getAllUsers()) {
+            for (Nutzer user : DatabaseGlobalAccess.getInstance().getAllUsers()) {
                 dcbmUser.addElement(user);
             }
         }
@@ -521,7 +503,7 @@ public class DashboardPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btUpdate;
     private javax.swing.JComboBox<String> cbHistory;
-    private javax.swing.JComboBox<NutzerNew> cbUser;
+    private javax.swing.JComboBox<Nutzer> cbUser;
     private javax.swing.JFormattedTextField ftfEnd;
     private javax.swing.JFormattedTextField ftfStart;
     private javax.swing.JLabel jLabel1;

@@ -6,10 +6,7 @@
 package general.bl;
 
 import analyzer.beans.WhitelistEntry;
-import analyzer.bl.AnalyzerManager;
-import dashboard.beans.Nutzer;
 import explorer.gui.ExplorerAddCommandDlg;
-import dashboard.beans.Durchlauf;
 import general.beans.io_objects.ProjectRun;
 import java.io.File;
 import java.nio.file.Path;

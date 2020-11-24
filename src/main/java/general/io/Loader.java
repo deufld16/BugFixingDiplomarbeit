@@ -8,8 +8,6 @@ package general.io;
 import analyzer.beans.WhitelistEntry;
 import analyzer.enums.ResultFileType;
 import dashboard.beans.Nutzer;
-import dashboard.beans.NutzerNew;
-import dashboard.database.DB_Access;
 import general.bl.GlobalAccess;
 import general.bl.GlobalParamter;
 import java.awt.Image;
@@ -325,7 +323,7 @@ public class Loader {
             FileInputStream fis = new FileInputStream(Paths.get(GlobalParamter.getInstance().getGeneralResPath().toString(), "lastUser.ser").toFile());
             ObjectInputStream ois = new ObjectInputStream(fis);
 
-            NutzerNew nutzer = (NutzerNew) ois.readObject();
+            Nutzer nutzer = (Nutzer) ois.readObject();
             if (dashboard.bl.DatabaseGlobalAccess.getInstance().isDbReachable()) {
                 if (dashboard.bl.DatabaseGlobalAccess.getInstance().getAllUsers().contains(nutzer)) {
                     int index = dashboard.bl.DatabaseGlobalAccess.getInstance().getAllUsers().indexOf(nutzer);
@@ -334,7 +332,7 @@ public class Loader {
                 }
             } else {
                 dashboard.bl.DatabaseGlobalAccess.getInstance().setCurrentNutzer(dashboard.bl.DatabaseGlobalAccess.getInstance().getAllUsers()
-                        .get(dashboard.bl.DatabaseGlobalAccess.getInstance().getAllUsers().indexOf(new NutzerNew("Default User"))));
+                        .get(dashboard.bl.DatabaseGlobalAccess.getInstance().getAllUsers().indexOf(new Nutzer("Default User"))));
             }
         }
     }
