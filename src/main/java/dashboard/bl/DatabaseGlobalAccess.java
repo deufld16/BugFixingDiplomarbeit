@@ -19,8 +19,8 @@ import recorder.beans.Command;
  * and open the template in the editor.
  */
 /**
- *
- * @author flori
+ * Singelton Klasse, welche alle für die DashboardDB notwendigen Daten beinhaltet
+ * @author Florian Deutschmann
  */
 public class DatabaseGlobalAccess {
 
@@ -31,9 +31,6 @@ public class DatabaseGlobalAccess {
     private List<Nutzer> allUsers = new LinkedList<>();
     private boolean dbReachable = false;
     private List<Durchlauf> durchlauf = new LinkedList<>();
-//    private List<Testgruppe> allTestGruppen = new LinkedList<>();
-//    private List<TestCase> allTestCases = new LinkedList<>();
-//    private List<Command> allCommands = new LinkedList<>();
 
     private EntityManagerFactory emf;
     private EntityManager em;
@@ -66,12 +63,6 @@ public class DatabaseGlobalAccess {
                 }
             }
         }
-//        TypedQuery<Testgruppe> testGruppeQuerry = em.createNamedQuery("Testgruppe.selectAll", Testgruppe.class);
-//        allTestGruppen = new LinkedList<>(testGruppeQuerry.getResultList());
-//        TypedQuery<TestCase> testCaseQuerry = em.createNamedQuery("TestCase.selectAll", TestCase.class);
-//        allTestCases = new LinkedList<>(testCaseQuerry.getResultList());
-//        TypedQuery<Command> commandQuerry = em.createNamedQuery("Command.selectAll", Command.class);
-//        allCommands = new LinkedList<>(commandQuerry.getResultList());
     }
 
     public boolean isDbReachable() {
@@ -147,30 +138,6 @@ public class DatabaseGlobalAccess {
         this.workflow = workflow;
     }
 
-
-//    public List<Testgruppe> getAllTestGruppen() {
-//        return allTestGruppen;
-//    }
-//
-//    public void setAllTestGruppen(List<Testgruppe> allTestGruppen) {
-//        this.allTestGruppen = allTestGruppen;
-//    }
-//
-//    public List<TestCase> getAllTestCases() {
-//        return allTestCases;
-//    }
-//
-//    public void setAllTestCases(List<TestCase> allTestCases) {
-//        this.allTestCases = allTestCases;
-//    }
-//
-//    public List<Command> getAllCommands() {
-//        return allCommands;
-//    }
-//
-//    public void setAllCommands(List<Command> allCommands) {
-//        this.allCommands = allCommands;
-//    }
     public List<Nutzer> getAllUsers() {
         return allUsers;
     }

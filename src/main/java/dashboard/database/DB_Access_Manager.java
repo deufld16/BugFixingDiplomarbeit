@@ -42,10 +42,6 @@ import javax.persistence.TypedQuery;
  */
 public class DB_Access_Manager {
 
-//    private List<Projekt> projektToImport = new LinkedList<>();
-//    private List<Testgruppe> testGruppenToImport = new LinkedList<>();
-//    private List<TestCase> TestCasesToImport = new LinkedList<>();
-//    private List<Command> CommandsToImport = new LinkedList<>();
     private static DB_Access_Manager instance;
 
     public static DB_Access_Manager getInstance() {
@@ -55,6 +51,11 @@ public class DB_Access_Manager {
         return instance;
     }
 
+    /**
+     * Methode, welche eine Verbindung zur Datenbank herstellt und alle
+     * notwendingen parameter setzt (vor allem jenene Boolean auf True, welcher
+     * anzeigt, dass die DB erreichbar ist)
+     */
     public void connect() {
 
         DatabaseGlobalAccess.getInstance().setEmf(Persistence.createEntityManagerFactory("PU_dashboarddb"));
@@ -63,6 +64,12 @@ public class DB_Access_Manager {
         DatabaseGlobalAccess.getInstance().setDbReachable(true);
     }
 
+    /**
+     * Methode, welche ein Projekt importiert, wenn man auf den Knopf "Daten
+     * Importieren" im Explorer drückt oder diesen öffnet
+     *
+     * @param prRuns
+     */
     public void importProject(List<ProjectRun> prRuns) {
         List<Projekt> projektToImport = new LinkedList<>();
         List<Testgruppe> testGruppenToImport = new LinkedList<>();
@@ -129,6 +136,13 @@ public class DB_Access_Manager {
         DatabaseGlobalAccess.getInstance().getEm().getTransaction().commit();
     }
 
+    /**
+     * Methode, welche den Deleted State von den Durchlaufgegenständen
+     * entsprechend anpasst. Dies ist vor allem dann notwendig, wenn die Daten
+     * offline verändert worden sind
+     *
+     * @param pr
+     */
     private void updateDeletedState(List<ProjectRun> pr) {
         List<Projekt> localProject = new LinkedList<>();
         List<Projekt> priorState = new LinkedList<>();
@@ -194,6 +208,13 @@ public class DB_Access_Manager {
         }
     }
 
+    /**
+     * Methode, welche überprüft ob der Parent das angegeben Child beinhaltet
+     *
+     * @param parent
+     * @param child
+     * @return
+     */
     private boolean containsItem(Durchlaufgegenstand parent, Durchlaufgegenstand child) {
         if (parent instanceof Projekt) {
             if (((Projekt) parent).getTestgruppen().contains((Testgruppe) child)) {
@@ -211,6 +232,13 @@ public class DB_Access_Manager {
         return false;
     }
 
+    /**
+     * Wird in importProject aufgerufen und wird verwendet um ein Projekt
+     * vollständig zu importieren, wenn es nocht nicht existiert hat
+     *
+     * @param pr
+     * @return
+     */
     private Projekt importProjekt(ProjectRun pr) {
         Projekt projekt = new Projekt(pr.getDescription(), LocalDate.now(), 0);
         pr.setDurchlauf_gegenstand(projekt);
@@ -232,6 +260,13 @@ public class DB_Access_Manager {
         return projekt;
     }
 
+    /**
+     * Methode zur Überprüfung ob ein Projekt bereits in der DB existiert oder
+     * nicht
+     *
+     * @param pr
+     * @return
+     */
     private Projekt projectExists(ProjectRun pr) {
         for (Projekt proj : DatabaseGlobalAccess.getInstance().getAllProjects()) {
             if (pr.getDescription().equalsIgnoreCase(proj.getBezeichnung())) {
@@ -241,16 +276,28 @@ public class DB_Access_Manager {
         return null;
     }
 
+    /**
+     * Methode zum Trennen der DB-Verbindung
+     */
     public void disconnect() {
         DatabaseGlobalAccess.getInstance().getEm().close();
         DatabaseGlobalAccess.getInstance().getEmf().close();
     }
 
+    /**
+     * Methode, welche die DB mit dem Persitenz-Kontext des EntityManagers
+     * vergleicht und übereinstimmt
+     */
     public void updateData() {
         DatabaseGlobalAccess.getInstance().getEm().getTransaction().begin();
         DatabaseGlobalAccess.getInstance().getEm().getTransaction().commit();
     }
 
+    /**
+     * Methode zum Hinzufügen eines Nutzers in die DB
+     *
+     * @param username
+     */
     public void addUser(String username) {
         Nutzer nutzer = new Nutzer(username);
         DatabaseGlobalAccess.getInstance().getEm().persist(nutzer);
@@ -259,11 +306,23 @@ public class DB_Access_Manager {
         DatabaseGlobalAccess.getInstance().setCurrentNutzer(nutzer);
     }
 
+    /**
+     * Methode, um alle Changes von alle Nutzern auszuwählen Wird beim Dashboard
+     * verwendet, um die Grafik anzuzeigens
+     *
+     * @return
+     */
     public List<Change> selectChanges() {
         TypedQuery<Change> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("ChangeNew.selectAll", Change.class);
         return changeTypeQuery.getResultList();
     }
 
+    /**
+     * Methode, um alle Changes von alle Nutzern in einem gewissen Zeitraum
+     * auszuwählen Wird beim Dashboard verwendet, um die Grafik anzuzeigen
+     *
+     * @return
+     */
     public List<Change> selectChanges(LocalDateTime from, LocalDateTime until) {
         TypedQuery<Change> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("ChangeNew.selectAllInterval", Change.class);
         changeTypeQuery.setParameter("vonDate", from);
@@ -271,6 +330,13 @@ public class DB_Access_Manager {
         return changeTypeQuery.getResultList();
     }
 
+    /**
+     * Methode, um alle Changes von einem gewissen Nutzer in einem gewissen
+     * Zeitraum auszuwählen Wird beim Dashboard verwendet, um die Grafik
+     * anzuzeigen
+     *
+     * @return
+     */
     public List<Change> selectChanges(LocalDateTime from, LocalDateTime until, Nutzer user) {
         TypedQuery<Change> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("ChangeNew.selectAllIntervalUser", Change.class);
         changeTypeQuery.setParameter("vonDate", from);
@@ -279,11 +345,25 @@ public class DB_Access_Manager {
         return changeTypeQuery.getResultList();
     }
 
+    /**
+     * Methode, um alle Durchläufe von allen Nutzern auszuwählen Wird beim
+     * Dashboard verwendet, um die Grafik anzuzeigen
+     *
+     * @return
+     */
     public List<Durchlauf> selectRun() {
         TypedQuery<Durchlauf> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("DurchlaufNew.selectAll", Durchlauf.class);
         return changeTypeQuery.getResultList();
     }
 
+    /**
+     * Methode, um alle Durchläufe von allen Nutzern in einem gewissen Zeitraum
+     * auszuwählen Wird beim Dashboard verwendet, um die Grafik anzuzeigen
+     *
+     * @param from
+     * @param until
+     * @return
+     */
     public List<Durchlauf> selectRun(LocalDate from, LocalDate until) {
         TypedQuery<Durchlauf> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("DurchlaufNew.selectAllInterval", Durchlauf.class);
         changeTypeQuery.setParameter("vonDate", from);
@@ -291,6 +371,16 @@ public class DB_Access_Manager {
         return changeTypeQuery.getResultList();
     }
 
+    /**
+     * Methode, um alle Durchläufe von einem gewissen Nutzern in einem gewissen
+     * Zeitraum auszuwählen Wird beim Dashboard verwendet, um die Grafik
+     * anzuzeigen
+     *
+     * @param from
+     * @param until
+     * @param user
+     * @return
+     */
     public List<Durchlauf> selectRun(LocalDate from, LocalDate until, Nutzer user) {
         TypedQuery<Durchlauf> changeTypeQuery = DatabaseGlobalAccess.getInstance().getEm().createNamedQuery("DurchlaufNew.selectAllIntervalUser", Durchlauf.class);
         changeTypeQuery.setParameter("vonDate", from);
@@ -299,6 +389,15 @@ public class DB_Access_Manager {
         return changeTypeQuery.getResultList();
     }
 
+    /**
+     * Methode, welche zum Hinzufügen einer Änderung dient, dabei wird das
+     * Entity, welches geändert wurde und eine bezeichnung übergeben. Die
+     * bezeichnung dient zum Identifizieren des Änderungstypen (entspricht den
+     * Bezeichnungen in der DB)
+     *
+     * @param entity
+     * @param bezeichnung
+     */
     public void addChangeEntry(ExplorerLayer entity, String bezeichnung) {
         Change change = new Change(LocalDateTime.now());
         for (ChangeType changeType : DatabaseGlobalAccess.getInstance().getAllChangeTypes()) {
@@ -315,6 +414,15 @@ public class DB_Access_Manager {
         }
     }
 
+    /**
+     * Methode, welche zum Hinzufügen einer Änderung dient, dabei wird das
+     * Entity, welches geändert wurde und eine bezeichnung übergeben. Die
+     * bezeichnung dient zum Identifizieren des Änderungstypen (entspricht den
+     * Bezeichnungen in der DB)
+     *
+     * @param entity
+     * @param bezeichnung
+     */
     public void addChangeEntry(Durchlaufgegenstand entity, String bezeichnung) {
         Change change = new Change(LocalDateTime.now());
         for (ChangeType changeType : DatabaseGlobalAccess.getInstance().getAllChangeTypes()) {
@@ -330,7 +438,12 @@ public class DB_Access_Manager {
             ex.printStackTrace();
         }
     }
-
+    /**
+     * Methode, welche verwendet wird, wenn ein Node im JTree gelöscht wird. Dies sorgt dafür,
+     * dass der DeletedState von dem gelöschten Entity und allen darunter liegenden Entities von 0 (=nicht gelöscht) auf 1 (=gelöscht)
+     * gesetzt wird
+     * @param entity 
+     */
     public void deleteNode(Durchlaufgegenstand entity) {
         entity.setDeleted(1);
         if (entity instanceof Projekt) {

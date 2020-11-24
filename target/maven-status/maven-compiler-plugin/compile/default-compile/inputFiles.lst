@@ -85,7 +85,6 @@ D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\util\
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\gui\GegenstandRenderer.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\recorder\beans\Operation.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\analyzer\beans\TestGroupErg.java
-D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_CachedConnection.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\beans\Testsystem.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\recorder\guiOperations\GUIOperations.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\remote\communication\RemoteClient.java
@@ -95,11 +94,8 @@ D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\recor
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\beans\Kasse.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ArticleConfigSettingsDlg.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\beans\TestCase.java
-D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_Access.java
-D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\beans\NutzerNew.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\general\bl\ContainerKeyListener.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DtfDrawerCommand.java
-D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\beans\DurchlaufgegenstandNew.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\recorder\io\IOChecker.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\recorder\gui\PaArticle.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\settings\bl\TableModelTestsysteme.java
@@ -121,8 +117,6 @@ D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\recorder\beans\
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\analyzer\gui\renderers\ComboboxRenderer.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\explorer\database\DB_Access.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Testgruppe.java
-D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\beans\ChangeNew.java
-D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\beans\testing.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\explorer\io\ExplorerIO.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\general\io\Saver.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\general\bl\GlobalAccess.java
@@ -149,7 +143,6 @@ D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\recorder\guiRen
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\general\beans\io_objects\ExplorerLayer.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\main\DTFCommands.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\ftp\FTPUtilCommand.java
-D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\beans\DurchlaufNew.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\analyzer\bl\ResultSelectionManager.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\util\ItemUtil.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\remote\ftp\FTPDownload.java
@@ -175,7 +168,6 @@ D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\explorer\bl\Exp
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\settings\gui\AddCashpointDlg.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\commands\impl\ExcecuteRecorderFileCommand.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\explorer\bl\ExplorerTreeCellRenderer.java
-D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_Properties.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\explorer\beans\Table.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\database\DBAccess.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\beans\Backoffice.java
@@ -196,7 +188,6 @@ D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\general\beans\i
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\input\DTFEloadingCommand.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\recorder\util\RecElementType.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ELoadingDlg.java
-D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\database\Test.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\explorer\gui\ExplorerAddTestgroupDlg.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\simulator\recorder\adapter\PauseAdapter.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\beans\Command.java
@@ -209,7 +200,6 @@ D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\analyzer\enums\
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\explorer\database\DB_Database.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\general\beans\io_objects\ProjectRun.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\ArticleInformationDlg.java
-D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\dashboard\database\DB_Database.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\recorder\gui\dlg\GewinnspielDlg.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\analyzer\bl\Differ.java
 D:\Schule\5DHIF\Diplomarbeit\BugFixingDiplomarbeit\src\main\java\recorder\xml\XMLPreparator.java

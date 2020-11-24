@@ -6,6 +6,7 @@
 package general.gui;
 
 import dashboard.bl.DatabaseGlobalAccess;
+import dashboard.database.DB_Access_Manager;
 import dashboard.gui.LoadingDLG;
 import explorer.beans.Database;
 import explorer.beans.Field;
@@ -1195,6 +1196,7 @@ public class Test_IDE_MainFrame extends javax.swing.JFrame {
     private void onExit(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_onExit
         try {
             general.io.Saver.saveLastUser();
+            DB_Access_Manager.getInstance().disconnect();
         } catch (IOException ex) {
             ex.printStackTrace();
         }

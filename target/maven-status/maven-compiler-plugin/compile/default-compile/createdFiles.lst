@@ -53,7 +53,6 @@ general\gui\Test_IDE_MainFrame$AttemptDatabaseConnection.class
 recorder\gui\MainFrame$5.class
 settings\gui\PaSettingsNew$10.class
 explorer\gui\ExplorerAddCommandDlg$3.class
-dashboard\database\DB_Access.class
 recorder\gui\PaArticleTable$1.class
 recorder\gui\dlg\GewinnspielDlg.class
 general\bl\GlobalMethods.class
@@ -97,7 +96,6 @@ recorder\gui\dlg\GewinnspielDlg$1.class
 recorder\enums\XMLOperations.class
 recorder\gui\dlg\OverloadValuesDlg$2.class
 settings\gui\PaSettingsNew$26.class
-dashboard\database\DB_Properties.class
 dashboard\gui\LoadingFrame$1.class
 simulator\commands\impl\ExcecuteRecorderFileCommand.class
 simulator\recorder\adapter\AbstractAdapter.class
@@ -141,7 +139,6 @@ analyzer\enums\ResultFileType.class
 settings\gui\PaSettingsNew$1.class
 analyzer\gui\AnalyzerPanel$9.class
 recorder\gui\dlg\WarenruecknahmeDlg$2.class
-dashboard\beans\NutzerNew.class
 explorer\database\DB_Database.class
 simulator\gui\TestGUI$1.class
 analyzer\gui\renderers\ComboboxRenderer.class
@@ -282,7 +279,6 @@ recorder\gui\PaArticle$8.class
 recorder\gui\PaFinance$3.class
 explorer\gui\PaFelderUI$4.class
 recorder\gui\dlg\GeschenkkarteDlg$4.class
-dashboard\beans\DurchlaufgegenstandNew.class
 recorder\gui\dlg\GewinnspielDlg$2.class
 dashboard\beans\Command.class
 settings\gui\PaSettingsNew$4.class
@@ -318,7 +314,6 @@ recorder\gui\dlg\WarenruecknahmeDlg$4.class
 explorer\gui\ExplorerTestcasePanel.class
 recorder\xml\XMLPreparator.class
 recorder\gui\PaArticle$34.class
-dashboard\database\DB_Database.class
 recorder\gui\dlg\AuthLimitsDlg.class
 recorder\gui\PaFinance$8.class
 recorder\gui\dlg\GeschenkkarteDlg$9.class
@@ -471,7 +466,6 @@ explorer\gui\ExplorerPanel$2.class
 settings\io\Loader.class
 explorer\database\DB_Properties.class
 simulator\commands\impl\CallGlobalCommand.class
-dashboard\database\DB_CachedConnection.class
 simulator\recorder\adapter\input\DTFKeyLockCommand.class
 dashboard\enums\ChangeType.class
 simulator\beans\Backoffice.class
@@ -494,9 +488,7 @@ recorder\guiRenderer\ArticleTableRenderer.class
 explorer\gui\ExplorerAddProjectDlg$1.class
 explorer\gui\ExplorerPanel$1.class
 recorder\gui\InitDlg_old$1.class
-dashboard\database\Test.class
 analyzer\gui\AnalyzerInitDlg$4.class
-dashboard\beans\DurchlaufNew.class
 settings\gui\AddNewCommandDlg$2.class
 dashboard\beans\ChangeType.class
 simulator\commands\impl\ChkSyncCommandV2.class
@@ -530,9 +522,7 @@ settings\bl\TableModelBackoffice.class
 general\gui\Test_IDE_MainFrame$13.class
 explorer\gui\ExplorerConfirmationDialog$2.class
 simulator\gui\SimulatorPanel$2.class
-dashboard\beans\testing.class
 recorder\gui\InitDlg_old$3.class
-dashboard\beans\ChangeNew.class
 simulator\commands\impl\ExportTableContentCommand.class
 explorer\gui\ExplorerAddProjectDlg$3.class
 recorder\gui\PaArticle$37.class

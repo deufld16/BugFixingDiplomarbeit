@@ -16,7 +16,7 @@ import org.eclipse.persistence.annotations.CascadeOnDelete;
 
 /**
  *
- * @author flori
+ * @author Florian Deutschmann
  */
 @Entity
 @Table(name = "command")

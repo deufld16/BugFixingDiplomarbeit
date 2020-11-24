@@ -22,7 +22,7 @@ import javax.persistence.Table;
 
 /**
  *
- * @author flori
+ * @author Florian Deutschmann
  */
 @Entity
 @Table(name = "nutzer")
