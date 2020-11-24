@@ -1196,9 +1196,13 @@ public class Test_IDE_MainFrame extends javax.swing.JFrame {
     private void onExit(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_onExit
         try {
             general.io.Saver.saveLastUser();
-            DB_Access_Manager.getInstance().disconnect();
-        } catch (IOException ex) {
-            ex.printStackTrace();
+            if (DatabaseGlobalAccess.getInstance().isDbReachable()) {
+                if (DatabaseGlobalAccess.getInstance().getEm().isOpen()) {
+                    DB_Access_Manager.getInstance().disconnect();
+                }
+            }
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "Es ist ein Fehler aufgetreten");
         }
     }//GEN-LAST:event_onExit
 
