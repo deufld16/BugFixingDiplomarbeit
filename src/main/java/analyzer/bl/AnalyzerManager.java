@@ -66,7 +66,6 @@ public class AnalyzerManager {
         try {
             testgroupsErg = ResultsIO.readSimulationErg();
             if (testgroupsErg != null) {
-//                executeDiff();
                 panel.adjustComponents();
                 LoadingDLG ldlg = new LoadingDLG(
                         GlobalAccess.getInstance().getTest_ide_main_frame(), 
@@ -84,88 +83,6 @@ public class AnalyzerManager {
         }
         return false;
     }
-
-    /**
-     * Method to run the diff process using Differ() class for all result files
-     * within testgroupsErg and mark the success of each and each layer 
-     * above the result file accordingly. 
-     * Furthermore, it takes necessary actions to update the UI with the recent
-     * developments.
-     */
-//    public void executeDiff() {
-//        Differ differ = new Differ();
-//        
-//        if(testgroupsErg != null) {
-//            for (TestGroupErg testGroupErg : testgroupsErg) {
-//                boolean testgroupSuccessful = true;
-//
-//                for (TestCaseErg testcase : testGroupErg.getTestcases()) {
-//                    boolean testcaseSuccessful = true;
-//
-//                    for (CashpointErg cashpoint : testcase.getCashpoints()) {
-//                        boolean cashpointSuccessful = true;
-//
-//                        for (Result result : cashpoint.getResults()) {
-//                            boolean resultSuccessful = true;
-//
-//                            for (ResultType type : result.getTypes()) {
-//                                double simRate = type.getResultFileType().getSimilarityRate();
-//                                Map<String, List<String>> differences
-//                                        = differ.work(
-//                                                Whitelist.applyWhitelist(
-//                                                        trimLines(
-//                                                                type.getReference().getLines(), 
-//                                                                type.getResultFileType()),
-//                                                        type.getResultFileType()),
-//                                                Whitelist.applyWhitelist(
-//                                                        trimLines(
-//                                                                type.getLines(), 
-//                                                                type.getResultFileType()), 
-//                                                        type.getResultFileType()),
-//                                                simRate);
-//                                List<String> refLinesOnlyValid = 
-//                                        Whitelist.removeIgnoreSections(
-//                                                differences.get("ref"));
-//                                List<String> ergLinesOnlyValid = 
-//                                        Whitelist.removeIgnoreSections(
-//                                                differences.get("erg"));
-//                                if (refLinesOnlyValid.equals(ergLinesOnlyValid)) {
-//                                    type.setSuccessful(true);
-//                                } else {
-//                                    type.setSuccessful(false);
-//                                    resultSuccessful = false;
-//                                }
-//                                type.setDifferences(differences);
-//                            }
-//
-//                            result.setSuccessful(resultSuccessful);
-//                            if (!resultSuccessful) {
-//                                cashpointSuccessful = false;
-//                            }
-//                        }
-//
-//                        cashpoint.setSuccessful(cashpointSuccessful);
-//                        if (!cashpointSuccessful) {
-//                            testcaseSuccessful = false;
-//                        }
-//                    }
-//
-//                    testcase.setSuccessful(testcaseSuccessful);
-//                    if (!testcaseSuccessful) {
-//                        testgroupSuccessful = false;
-//                    }
-//                }
-//
-//                testGroupErg.setSuccessful(testgroupSuccessful);
-//            }
-//        }
-//
-//        if(panel != null) {
-//            ResultSelectionManager rsm = ResultSelectionManager.getInstance();
-//            rsm.setAllTestgroups(testgroupsErg);
-//            rsm.updateAll();
-//        }
-//    }
     
     /**
      * Method to remove the unnecessary parts of the content of an erg- or ref-file
