@@ -41,14 +41,14 @@ public class DatabaseGlobalAccess {
     }
 
     public void getDatabaseData() {
-        em.persist(new ChangeType("DELETED"));
-        em.persist(new ChangeType("ADDED"));
-        em.persist(new ChangeType("MOVED"));
-        em.persist(new ChangeType("STATECHANGED"));
-        em.persist(new ChangeType("CHANGED"));
-        em.persist(new Nutzer("Default User"));
-        em.getTransaction().begin();
-        em.getTransaction().commit();
+//        em.persist(new ChangeType("DELETED"));
+//        em.persist(new ChangeType("ADDED"));
+//        em.persist(new ChangeType("MOVED"));
+//        em.persist(new ChangeType("STATECHANGED"));
+//        em.persist(new ChangeType("CHANGED"));
+//        em.persist(new Nutzer("Default User"));
+//        em.getTransaction().begin();
+//        em.getTransaction().commit();
 
         TypedQuery<ChangeType> changeTypeQuery = em.createNamedQuery("ChangeType.selectAll", ChangeType.class);
         allChangeTypes = new LinkedList<>(changeTypeQuery.getResultList());

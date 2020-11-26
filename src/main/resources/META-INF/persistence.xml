@@ -12,14 +12,12 @@
     <class>dashboard.beans.Durchlaufgegenstand</class>
     <class>dashboard.beans.Nutzer</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/dashboarddb"/>
-      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://10.93.18.64:5432/dashboarddb"/>
+      <property name="javax.persistence.jdbc.user" value="htl"/>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="admin123"/>
+      <property name="javax.persistence.jdbc.password" value="postgres4HTL"/>
       <property name="javax.persistence.schema-avax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-      <property name="javax.persistence.jdbc.password" value="admin123"/>
       <property name="jageneration.database.action" value="drop-and-create"/>
-      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
     </properties>
   </persistence-unit>
 </persistence>
